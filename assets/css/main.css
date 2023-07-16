@@ -1,0 +1,238 @@
+:root {
+    --first-main-color: #1900ff;
+    --second-main-color: #d400ff;
+    --first-theme-color: #000;
+    --second-theme-color: #111;
+    --third-theme-color: #161616;
+}
+
+/* Réinitialisation des styles par défaut */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: var(--second-theme-color);
+}
+
+.hero {
+    background-color: var(--first-theme-color);
+    padding: 100px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    box-sizing: border-box;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--second-main-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.main {
+    position: relative;
+    background-color: var(--second-theme-color);
+    padding: 50px 50px 50px 100px;
+    margin: 0 auto;
+    /* min-height: calc(100% - 58px) !important; */
+}
+
+.main h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.main h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    font-size: 18px;
+    margin: 0 50px 10px 0;
+}
+
+.last-article {
+    margin-bottom: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .spec::after {
+    box-sizing: border-box;
+    content: "";
+    background: linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    position: relative;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    height: 5px;
+} */
+
+.article-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.articles-line {
+    margin-top: 50px;
+    max-width: 400px;
+}
+
+.last-article .desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.last-article .articles-img {
+    max-width: 250px;
+}
+
+.read-more,
+.cta-button,
+.button {
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background: linear-gradient(to right, var(--first-main-color), transparent) var(--first-main-color);
+    transition: background-color 0.5s ease;
+    max-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.read-more:hover,
+.cta-button:hover,
+.button:hover {
+    background-color: var(--second-main-color);
+}
+
+.cta-box {
+    display: none;
+}
+
+.cta-box.active {
+    box-sizing: border-box;
+    display: block;
+    background-color: var(--second-theme-color);
+    margin: 100px;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.colored-logo,
+.hero h2 span {
+    background-image: -webkit-linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    background-image: linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media all and (max-width: 620px) {
+    .cta-button {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .read-more {
+        font-size: 14px;
+        margin: 10px auto 0 auto;
+    }
+
+    .article-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .articles-line {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .main h2 {
+        font-size: 26px;
+    }
+
+    .last-article .desc {
+        flex-direction: column
+    }
+
+    .last-article h3 {
+        font-size: 18px;
+    }
+
+    .last-article p {
+        font-size: 14px;
+    }
+}
+
+
+@media all and (max-width: 1400px) and (min-width: 620px) {
+    .main {
+        padding: 50px;
+    }
+}
+
+@media all and (max-width:620px) and (min-width: 400px) {
+    .main {
+        padding: 30px;
+    }
+}
+
+@media all and (max-width:400px) {
+    .main {
+        padding: 10px;
+    }
+}

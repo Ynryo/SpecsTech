@@ -1,0 +1,15 @@
+footer {
+    background-color: var(--first-theme-color);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+/* 
+footer.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */

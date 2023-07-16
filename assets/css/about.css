@@ -1,0 +1,16 @@
+.main.about p:not(:last-child),
+.main.legal p:not(:last-child){
+    margin-bottom: 40px;
+}
+
+@media all and (max-width:600px) {
+    .main p {
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width:400px) {
+    .main p {
+        text-align: justify;
+    }
+}

@@ -1,0 +1,39 @@
+.link {
+    text-decoration: none;
+    position: relative;
+    background-image: -webkit-linear-gradient(to right, #fff, #fff);
+    background-image: linear-gradient(to right, #fff, #fff);
+    color: #FFF;
+    -webkit-background-clip: text;
+    background-clip: text;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    margin: 0;
+}
+
+.link:hover {
+    background-image: -webkit-linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    background-image: linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 0;
+    height: 3px;
+    top: 15px;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.link:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}

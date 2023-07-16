@@ -1,0 +1,136 @@
+.menu nav {
+    width: auto;
+}
+
+.menu.change nav ul li {
+    margin-left: 0;
+}
+
+.menu.change form {
+    margin: 0;
+}
+
+.menu.change form input {
+    display: block;
+    margin: auto 0 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    max-width: none;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.bar1::before,
+.bar2::before,
+.bar3::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    color: var(--second-main-color);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right, var(--first-main-color), var(--second-main-color));
+    z-index: 2;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.menu-icon:hover .bar1::before,
+.menu-icon:hover .bar2::before,
+.menu-icon:hover .bar3::before {
+    opacity: 1;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 93px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--first-theme-color);
+}
+
+.change.menu {
+    display: block;
+    z-index: 1;
+    padding: 30px;
+}
+
+.menu nav {
+    display: inline-block;
+}
+
+.menu nav ul {
+    list-style: none;
+}
+
+.menu nav ul li {
+    display: inline-block;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media all and (max-width: 825px) {
+
+    header nav:not(.menu nav),
+    header form input:not(.menu form input) {
+        display: none !important;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header form input {
+        display: none;
+    }
+}
+
+@media all and (min-width: 825px) {
+    header nav {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        display: none !important;
+    }
+}
