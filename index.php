@@ -82,9 +82,7 @@
     </section>
 
     <?php include(dirname(__FILE__, 1) . '/assets/src/footer.php') ?>
-    <script type="text/javascript" src="/assets/js/menu.js"></script>
     <script type="text/javascript" src="/assets/js/modal.js"></script>
-    <script type="text/javascript" src="/assets/js/search.js"></script>
 </body>
 
 </html>
