@@ -58,6 +58,10 @@
     right: auto;
 }
 
+.card-img-container {
+    height: 200px;
+}
+
 .card .cards-img {
     box-sizing: border-box;
     max-width: 260px;
