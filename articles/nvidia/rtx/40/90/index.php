@@ -27,8 +27,7 @@
 </head>
 
 <body>
-    <?php include(dirname(__FILE__) . '/assets/src/header.php') ?>
-
+    <?php include(dirname(__FILE__, 6) . '/assets/src/header.php') ?>
     <section class="hero">
         <div class="hero-content">
             <h2><span>NVIDIA GeForce RTX 4090</span></h2>
