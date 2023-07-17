@@ -2,16 +2,16 @@
 <html>
 
 <head>
-    <title>NVIDIA GeForce RTX 4070 | Specs-Tech</title>
+    <title>NVIDIA GeForce RTX 4090 | Specs-Tech</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="SpecsTech" />
     <meta name="description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
-    <meta property="og:title" content="NVIDIA GeForce RTX 4070 | Specs-Tech" />
+    <meta property="og:title" content="NVIDIA GeForce RTX 4090 | Specs-Tech" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://specstech.fr/nvidia/rtx/40/70/" />
+    <meta property="og:url" content="https://specstech.fr/nvidia/rtx/40/90/" />
     <meta property="og:description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
-    <link rel="canonical" href="https://specstech.fr/nvidia/rtx/40/70/">
+    <link rel="canonical" href="https://specstech.fr/nvidia/rtx/40/90/">
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-50x50.png">
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/link.css">
@@ -27,46 +27,13 @@
 </head>
 
 <body>
-    <header>
-        <h1>Specs-Tech</h1>
-        <form>
-            <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar"
-                name="search">
-        </form>
-        <nav>
-            <ul>
-                <li><a href="/" class="site-nav">Accueil</a></li>
-                <li><a href="/articles/" class="site-nav">Articles</a></li>
-                <li><a href="/about/" class="site-nav">À propos</a></li>
-                <li><a href="/contact/" class="site-nav">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-icon" id="menu-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div class="menu" id="menu">
-            <form>
-                <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar"
-                    name="search">
-            </form>
-            <nav>
-                <ul>
-                    <li><a href="/" class="site-nav">Accueil</a></li>
-                    <li><a href="/articles/" class="site-nav">Articles</a></li>
-                    <li><a href="/about/" class="site-nav">À propos</a></li>
-                    <li><a href="/contact/" class="site-nav">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include(dirname(__FILE__) . '/assets/src/header.php') ?>
 
     <section class="hero">
         <div class="hero-content">
-            <h2><span>NVIDIA GeForce RTX 4070</span></h2>
+            <h2><span>NVIDIA GeForce RTX 4090</span></h2>
             <img src="/assets/svg/header-line.svg" alt="" srcset="/assets/svg/header-line.svg">
-            <p>Retrouvez les informations techniques de la NVIDIA GeForce RTX 4070.</p>
+            <p>Retrouvez les informations techniques de la NVIDIA GeForce RTX 4090.</p>
         </div>
     </section>
 
@@ -77,19 +44,19 @@
                 <h3>Performances</h3>
                 <div class="table-row">
                     <span class="block-name">Fréquence de base</span>
-                    <span class="block-value">1,92 GHz</span>
+                    <span class="block-value">2,24 GHz</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Fréquence boost</span>
-                    <span class="block-value">2,48 GHz</span>
+                    <span class="block-value">2,52 GHz</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Processeurs de flux</span>
-                    <span class="block-value">5888</span>
+                    <span class="block-value">16384</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Mémoire vidéo</span>
-                    <span class="block-value">12 Go</span>
+                    <span class="block-value">24 Go</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Type de mémoire</span>
@@ -97,23 +64,22 @@
                 </div>
                 <div class="table-row">
                     <span class="block-name">Interface mémoire</span>
-                    <span class="block-value">192 Bits</span>
+                    <span class="block-value">384 Bits</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Consommation</span>
-                    <span class="block-value">200 W</span>
+                    <span class="block-value">450 W</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Alimentation recommandée</span>
-                    <span class="block-value">650 W</span>
+                    <span class="block-value">850 W</span>
                 </div>
             </div>
             <div class="table">
                 <h3>Affichage</h3>
                 <div class="table-row">
                     <span class="block-name">Définition d'affichage maximale</span>
-                    <span class="block-value">3840 &times; 2160 pixels à 240 Hz<br>7680 &times; 4320 pixels à 60
-                        Hz</span>
+                    <span class="block-value">7680 &times; 4320 pixels</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Nombre d'écran(s)</span>
@@ -128,12 +94,12 @@
                 <h3>Connectique</h3>
                 <div class="table-row">
                     <span class="block-name">Sorties vidéos</span>
-                    <span class="block-value">HDMI (&times;1) et DisplayPort (&times;3)</span>
+                    <span class="block-value">HDMI 2.1 (&times;1) et DisplayPort (&times;3)</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Connecteur(s) d'alimentation</span>
-                    <span class="block-value">2&times; câbles PCIe à 8 broches (adaptateur intégré)<br>OU Câble PCIe Gen
-                        5 de 300W ou plus</span>
+                    <span class="block-value">3&times; câbles PCIe à 8 broches (adaptateur intégré)<br>OU Câble PCIe Gen
+                        5 de 450W ou plus</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Bus</span>
@@ -144,15 +110,15 @@
                 <h3>Caractéristiques physiques</h3>
                 <div class="table-row">
                     <span class="block-name">Longueur</span>
-                    <span class="block-value">244 mm</span>
+                    <span class="block-value">304 mm</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Largeur</span>
-                    <span class="block-value">112 mm</span>
+                    <span class="block-value">137 mm</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Epaisseur</span>
-                    <span class="block-value">2 slots</span>
+                    <span class="block-value">3 slots</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">LED</span>
@@ -251,7 +217,7 @@
                 </div>
                 <div class="table-row">
                     <span class="block-name">Encodeur NVIDIA (NVENC)</span>
-                    <span class="block-value">1&times; 8ème génération</span>
+                    <span class="block-value">2&times; 8ème génération</span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Décodeur NVIDIA (NVENC)</span>
@@ -276,7 +242,7 @@
             </div>
         </div>
         <div class="product-img">
-            <img srcset="/assets/images/3d/nvidia-rtx-4070.png" src="/assets/images/3d/nvidia-rtx-4070.png">
+            <img srcset="/assets/images/3d/nvidia-rtx-4090.png" src="/assets/images/3d/nvidia-rtx-4090.png">
         </div>
     </section>
 

@@ -27,38 +27,7 @@
 </head>
 
 <body>
-    <header>
-        <h1>Specs-Tech</h1>
-        <!-- <form> -->
-            <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="search">
-        <!-- </form> -->
-        <nav>
-            <ul>
-                <li><a href="/" class="site-nav">Accueil</a></li>
-                <li><a href="/articles/" class="site-nav">Articles</a></li>
-                <li><a href="/about/" class="site-nav">À propos</a></li>
-                <li><a href="/contact/" class="site-nav">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-icon" id="menu-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div class="menu" id="menu">
-            <!-- <form> -->
-                <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="search">
-            <!-- </form> -->
-            <nav>
-                <ul>
-                    <li><a href="/" class="site-nav">Accueil</a></li>
-                    <li><a href="/articles/" class="site-nav">Articles</a></li>
-                    <li><a href="/about/" class="site-nav">À propos</a></li>
-                    <li><a href="/contact/" class="site-nav">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include(dirname(__FILE__) . '/assets/src/header.php') ?>
 
     <section class="hero">
         <div class="hero-content">
@@ -125,9 +94,7 @@
         </a>
     </section>
 
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Specs-Tech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a></p>
-    </footer>
+    <?php include(dirname(__FILE__) . '/assets/src/footer.php') ?>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
     <script type="text/javascript" src="/assets/js/search.js"></script>
 </body>
