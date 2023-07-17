@@ -30,8 +30,8 @@
     <section class="main cards">
         <a href="/articles/nvidia/rtx/40/60/" class="card">
             <div class="card-img-container">
-                <img src="/assets/images/msi-rtx-4060-side.png" alt="Image de la NVIDIA GeForce RTX 4060"
-                    srcset="/assets/images/msi-rtx-4060-side.png" class="cards-img">
+                <img src="/assets/images/nvidia-rtx-4060.png" alt="Image de la MSI GeForce RTX 4060 GAMING X 8 Go"
+                    srcset="/assets/images/nvidia-rtx-4060.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
@@ -39,8 +39,8 @@
         </a>
         <a href="/articles/nvidia/rtx/40/60-ti/" class="card">
             <div class="card-img-container">
-                <img src="/assets/images/nvidia-rtx-4060-ti-front-small.png" alt="Image de la NVIDIA GeForce RTX 4060 Ti"
-                    srcset="/assets/images/nvidia-rtx-4060-ti-front-small.png" class="cards-img">
+                <img src="/assets/images/nvidia-rtx-4060-ti.png" alt="Image de la NVIDIA GeForce RTX 4060 Ti"
+                    srcset="/assets/images/nvidia-rtx-4060-ti.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
@@ -48,8 +48,8 @@
         </a>
         <a href="/articles/nvidia/rtx/40/70/" class="card">
             <div class="card-img-container">
-            <img src="/assets/images/nvidia-rtx-4070-front-small.png" alt="Image de la NVIDIA GeForce RTX 4070"
-                srcset="/assets/images/nvidia-rtx-4070-front-small.png" class="cards-img">
+            <img src="/assets/images/nvidia-rtx-4070.png" alt="Image de la NVIDIA GeForce RTX 4070"
+                srcset="/assets/images/nvidia-rtx-4070.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
@@ -57,8 +57,8 @@
         </a>
         <a href="/articles/nvidia/rtx/40/70-ti/" class="card">
             <div class="card-img-container">
-            <img src="/assets/images/asus-rog-rtx-4070-ti.webp" alt="Image de la NVIDIA GeForce RTX 4070 Ti"
-                srcset="/assets/images/asus-rog-rtx-4070-ti.webp" class="cards-img">
+            <img src="/assets/images/nvidia-rtx-4070-ti.png" alt="Image de la MSI GeForce RTX 4070 Ti SUPPRIM X 12 Go"
+                srcset="/assets/images/nvidia-rtx-4070-ti.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
@@ -66,8 +66,8 @@
         </a>
         <a href="/articles/nvidia/rtx/40/80/" class="card">
             <div class="card-img-container">
-                <img src="/assets/images/nvidia-rtx-4080-front-small.png" alt="Image de la NVIDIA GeForce RTX 4080"
-                    srcset="/assets/images/nvidia-rtx-4080-front-small.png" class="cards-img">
+                <img src="/assets/images/nvidia-rtx-4080.png" alt="Image de la NVIDIA GeForce RTX 4080"
+                    srcset="/assets/images/nvidia-rtx-4080.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
@@ -75,13 +75,12 @@
         </a>
         <a href="/articles/nvidia/rtx/40/90/" class="card">
             <div class="card-img-container">
-            <img src="/assets/images/nvidia-rtx-4090-front-small.png" alt="Image de la NVIDIA GeForce RTX 4090"
-                srcset="/assets/images/nvidia-rtx-4090-front-small.png" class="cards-img">
+            <img src="/assets/images/nvidia-rtx-4090.png" alt="Image de la NVIDIA GeForce RTX 4090"
+                srcset="/assets/images/nvidia-rtx-4090.png" class="cards-img">
             </div>
             <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
                 srcset="/assets/svg/cards-line.svg" class="cards-line">
             <h3 class="">NVIDIA GeForce RTX 4090</h3>
-        </a>
     </section>
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>
