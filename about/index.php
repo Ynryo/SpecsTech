@@ -13,7 +13,7 @@
     <meta property="og:description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
     <link rel="canonical" href="https://specstech.fr/about">
     <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
-    <?php include(dirname(__FILE__, 1) . '/assets/src/assets.php') ?>
+    <?php include(dirname(__FILE__, 2) . '/assets/src/assets.php') ?>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
     </section>
 
-    <?php include(dirname(__FILE__) . '/assets/src/footer.php') ?>
+    <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
     <script type="text/javascript" src="/assets/js/search.js"></script>
 </body>
