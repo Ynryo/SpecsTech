@@ -28,7 +28,7 @@
 
 <body>
     <?php include(dirname(__FILE__) . '/assets/src/header.php') ?>
-    
+
     <section class="hero">
         <div class="hero-content">
             <h2><span>NVIDIA GeForce RTX 4080</span></h2>
@@ -246,9 +246,7 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Specs-Tech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a></p>
-    </footer>
+    <?php include(dirname(__FILE__) . '/assets/src/footer.php') ?>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
     <script type="text/javascript" src="/assets/js/search.js"></script>
 </body>
