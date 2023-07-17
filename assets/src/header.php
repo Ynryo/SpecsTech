@@ -6,10 +6,10 @@
     </form>
     <nav>
         <ul>
-            <li><a href="/" class="site-nav">Accueil</a></li>
-            <li><a href="/articles/" class="site-nav">Articles</a></li>
-            <li><a href="/about/" class="site-nav">À propos</a></li>
-            <li><a href="/contact/" class="site-nav">Contact</a></li>
+            <li><a class="site-nav" href="/">Accueil</a></li>
+            <li><a class="site-nav" href="/articles/">Articles</a></li>
+            <li><a class="site-nav" href="/about/">À propos</a></li>
+            <li><a class="site-nav" href="/contact/">Contact</a></li>
         </ul>
     </nav>
     <div class="menu-icon" id="menu-icon">
@@ -24,10 +24,10 @@
         </form>
         <nav>
             <ul>
-                <li><a href="/" class="site-nav">Accueil</a></li>
-                <li><a href="/articles/" class="site-nav">Articles</a></li>
-                <li><a href="/about/" class="site-nav">À propos</a></li>
-                <li><a href="/contact/" class="site-nav">Contact</a></li>
+                <li><a class="site-nav" href="/">Accueil</a></li>
+                <li><a class="site-nav" href="/articles/">Articles</a></li>
+                <li><a class="site-nav" href="/about/">À propos</a></li>
+                <li><a class="site-nav" href="/contact/">Contact</a></li>
             </ul>
         </nav>
     </div>
