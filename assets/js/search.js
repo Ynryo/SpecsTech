@@ -3,16 +3,25 @@ var input, filter, ul, li, a, i, txtValue;
 
 
 searchBar.addEventListener('keyup', (key) => {
-    if (key.key === "Enter") {
-        if (window.location.host === "127.0.0.1:3000") {
-            window.location.href = "http://127.0.0.1:3000/search/?search=" + searchBar.value
-        } else if(window.location.host === "127.0.0.1:5000"){
-            window.location.href = "http://127.0.0.1:5000/search/?search=" + searchBar.value
-        } else if (window.location.host === "specstech.fr"){
-            window.location.href = "https://specstech.fr/search/?search=" + searchBar.value
-        }
-        console.log(searchBar.value)
-    }
+    // if (key.key === "Enter") {
+    //     if (window.location.host === "127.0.0.1:3000") {
+    //         window.location.href = "http://127.0.0.1:3000/search/?search=" + searchBar.value
+    //     } else if(window.location.host === "127.0.0.1:5000"){
+    //         window.location.href = "http://127.0.0.1:5000/search/?search=" + searchBar.value
+    //     } else if (window.location.host === "specstech.fr"){
+    //         window.location.href = "https://specstech.fr/search/?search=" + searchBar.value
+    //     }
+    //     console.log(searchBar.value)
+    // }
+
+    // new URL(window.location.href).searchParams.forEach((value, key) => {
+    //     if (key === "barcode") {
+    //         barcode = value;
+    //         if (barcode) {
+    //             getNutritionInfos(barcode)
+    //         }
+    //     }
+    // })
 
 
 
