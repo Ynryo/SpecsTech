@@ -66,6 +66,7 @@
     box-sizing: border-box;
     max-width: 260px;
     width: 100%;
+    overflow: hidden;
 }
 
 .card .cards-line {
