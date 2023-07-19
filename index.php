@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
 
 <head>
     <title>Specs-Tech</title>
@@ -24,7 +24,7 @@
             <h2>Bienvenue sur <span class="colored-logo">Specs-Tech</span></h2>
             <img src="/assets/svg/header-line.svg" alt="" srcset="/assets/svg/header-line.svg">
             <p>Découvrez les spécifications techniques des dernières cartes graphiques.</p>
-            <a href="#" class="cta-button" id="cta-button-open">En savoir plus</a>
+            <a class="cta-button" id="cta-button-open">En savoir plus</a>
             <div class="modal-overlay">
                 <div class="modal">
                     <h3>En savoir plus</h3>
@@ -47,7 +47,7 @@
             <h3>NVIDIA GeForce RTX 4090</h3>
             <div class="desc">
                 <p>Décrouvrez les spécifications techniques de la GeForce RTX 4090 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4090.png"></img>
+                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4090.png" alt="NVIDIA GeForce RTX 4070"></img>
             </div>
             <div class="article-footer">
                 <a href="/articles/nvidia/rtx/40/90/" class="read-more">Voir les spécifications</a>
@@ -59,7 +59,7 @@
             <h3>NVIDIA GeForce RTX 4080</h3>
             <div class="desc">
                 <p>Décrouvrez les spécifications techniques de la GeForce RTX 4080 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4080.png"></img>
+                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4080.png" alt="NVIDIA GeForce RTX 4080"></img>
             </div>
             <div class="article-footer">
                 <a href="/articles/nvidia/rtx/40/80/" class="read-more">Voir les spécifications</a>
@@ -71,7 +71,7 @@
             <h3>NVIDIA GeForce RTX 4070</h3>
             <div class="desc">
                 <p>Décrouvrez les spécifications techniques de la GeForce RTX 4070 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4070.png"></img>
+                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4070.png" alt="NVIDIA GeForce RTX 4090"></img>
             </div>
             <div class="article-footer">
                 <a href="/articles/nvidia/rtx/40/70/" class="read-more">Voir les spécifications</a>

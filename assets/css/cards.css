@@ -60,13 +60,14 @@
 
 .card-img-container {
     height: 200px;
+    overflow: hidden;
 }
 
 .card .cards-img {
     box-sizing: border-box;
     max-width: 260px;
     width: 100%;
-    overflow: hidden;
+    object-fit: contain;
 }
 
 .card .cards-line {
@@ -91,7 +92,7 @@
     }
 
     .card h3 {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 }
 
@@ -110,6 +111,7 @@
         padding: 10px;
         background-color: var(--third-theme-color);
         border-radius: 10px;
+        height: auto;
     }
 
     .cards-img {
@@ -123,7 +125,7 @@
 
     .card h3 {
         display: flex;
-        font-size: 16px;
+        font-size: 16px !important;
         width: 50%;
         margin: 0 auto;
         text-align: left;
@@ -134,5 +136,6 @@
 @media all and (max-width:400px) {
     .card .card-img-container {
         padding: 5px;
+        height: auto;
     }
 }
