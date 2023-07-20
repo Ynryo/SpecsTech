@@ -15,8 +15,19 @@ header h1 {
     display: block;
     margin: auto 0;
     text-transform: uppercase;
-    width: 210px;
+    width: 250px;
 }
+
+/* header h1::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/assets/icons-assets/gradient-shadow.png") no-repeat center center;
+    top: 100px;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+} */
 
 header form input {
     border: none;
