@@ -1,8 +1,8 @@
 <header>
-    <div class="icon">
+    <a class="icon nolink" href="/">
         <h1>Specs-Tech</h1>
         <!-- <img src="/assets/icons-assets/gradient-shadow.png"> -->
-    </div>
+    </a>
     <form novalidate method="post" action="/search/?">
         <input type="search" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="search" role="combobox" aria-roledescription="combobox">
     </form>
