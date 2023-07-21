@@ -8,4 +8,5 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3505338734539298" crossorigin="anonymous"></script>
 <noscript>Votre navigateur bloque le JavaScript. Merci de l'activer pour pouvoir utiliser le site à son plein potentiel.</noscript>
