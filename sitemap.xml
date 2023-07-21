@@ -28,21 +28,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/90/</loc>
-  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/80/</loc>
-  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/70/</loc>
-  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://specstech.fr/legal/</loc>
   <lastmod>2023-07-21T15:24:38+00:00</lastmod>
   <priority>0.80</priority>
@@ -104,6 +89,21 @@
 </url>
 <url>
   <loc>https://specstech.fr/articles/nvidia/rtx/40/70-ti/</loc>
+  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://specstech.fr/articles/nvidia/rtx/40/70/</loc>
+  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://specstech.fr/articles/nvidia/rtx/40/80/</loc>
+  <lastmod>2023-07-21T15:24:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://specstech.fr/articles/nvidia/rtx/40/90/</loc>
   <lastmod>2023-07-21T15:24:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
