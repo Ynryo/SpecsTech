@@ -1,3 +1,4 @@
 /.htaccess
 /test.html
 /.gitignore
+.vscode/settings.json
