@@ -118,6 +118,10 @@
                     <span class="block-name">Type de refroidissement</span>
                     <span class="block-value">Actif (fansink)</span>
                 </div>
+                <div class="table-row">
+                    <span class="block-name">Existe en Founders Edition</span>
+                    <span class="block-value">Oui</span>
+                </div>
             </div>
             <div class="table">
                 <h3>Technologies</h3>
