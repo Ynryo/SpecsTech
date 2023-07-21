@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://specstech.fr" />
     <meta property="og:description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
     <link rel="canonical" href="https://specstech.fr">
-    <link rel="stylesheet" type="text/css" href="/assets/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/maintenance.css">
     <?php include(dirname(__FILE__, 1) . '/assets/src/assets.php') ?>
 </head>
 

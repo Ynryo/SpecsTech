@@ -28,7 +28,7 @@
     </section>
     
     <section class="main">
-        <div class="cards-section-top">
+        <!-- <div class="cards-section-top">
             <select id="cards-sort">
                 <optgroup>
                     <option value="date-ascend">Date de sortie (récente/ancienne)</option>
@@ -37,7 +37,7 @@
                     <option value="name-descent">Nom (Z/A)</option>
                 </optgroup>
             </select>
-        </div>
+        </div> -->
         <div class="cards">
             <a href="/articles/nvidia/rtx/30/50/" class="card">
                 <div class="card-img-container">

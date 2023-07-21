@@ -34,15 +34,15 @@
                 <h3>Performances</h3>
                 <div class="table-row">
                     <span class="block-name">Fréquence de base</span>
-                    <span class="block-value">1.55/1.51 GHz</span>
+                    <span class="block-value">1.55/1.51 GHz<a href="#*" class="nolink"> [*]</a></span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Fréquence boost</span>
-                    <span class="block-value">1.78/1.76 GHz</span>
+                    <span class="block-value">1.78/1.76 GHz<a href="#*" class="nolink"> [*]</a></span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Processeurs de flux</span>
-                    <span class="block-value">2560/2304</span>
+                    <span class="block-value">2560/2304<a href="#*" class="nolink"> [*]</a></span>
                 </div>
                 <div class="table-row">
                     <span class="block-name">Mémoire vidéo</span>
@@ -221,6 +221,7 @@
                     <span class="block-value">Non</span>
                 </div>
             </div>
+            <p id="*">[*] - La carte graphique GeForce RTX 3050 (OEM) possède 2304 cœurs CUDA, une fréquence de base de 1,51 GHz et une fréquence Boost de 1,76 GHz.</p>
         </div>
         <div class="product-img">
             <img srcset="/assets/images/3d/nvidia-rtx-3050.png" src="/assets/images/3d/nvidia-rtx-3050.png" alt="Image de la NVIDIA GeForce RTX 3050">
