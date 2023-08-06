@@ -60,10 +60,3 @@
         width: auto;
     }
 }
-
-@media all and (max-width:620px) {
-    .specs p,
-    .specs span {
-        font-size: 14px !important;
-    }
-}

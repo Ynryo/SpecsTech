@@ -28,7 +28,7 @@
 
     <section class="main">
         <p>Pour toute demande professionnelle ou commerciale, veuillez contacter le support à l'adresse mail suivante :</p>
-        <a class="link" href="mailto:contact@specstech.fr">contact@specstech.fr</a>
+        <a class="link" href="mailto:ynryo.pro@gmail.com">ynryo.pro@gmail.com</a>
     </section>
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>
