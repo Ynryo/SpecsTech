@@ -23,64 +23,39 @@
         <div class="hero-content">
             <h2><span>Rechercher</span></h2>
             <img src="/assets/svg/header-line.svg" alt="" srcset="/assets/svg/header-line.svg">
-            <p>Trouver votre carte graphique.</p>
+            <p>Trouvez votre carte graphique.</p>
         </div>
     </section>
 
     <section class="main cards">
-        <a href="/articles/nvidia/rtx/40/60/" class="card">
-            <div class="card-img-container">
-                <img src="/assets/images/nvidia-rtx-4060.png" alt="Image de la MSI GeForce RTX 4060 GAMING X 8 Go"
-                    srcset="/assets/images/nvidia-rtx-4060.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4060</h3>
-        </a>
-        <a href="/articles/nvidia/rtx/40/60-ti/" class="card">
-            <div class="card-img-container">
-                <img src="/assets/images/nvidia-rtx-4060-ti.png" alt="Image de la NVIDIA GeForce RTX 4060 Ti"
-                    srcset="/assets/images/nvidia-rtx-4060-ti.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4060 Ti</h3>
-        </a>
-        <a href="/articles/nvidia/rtx/40/70/" class="card">
-            <div class="card-img-container">
-            <img src="/assets/images/nvidia-rtx-4070.png" alt="Image de la NVIDIA GeForce RTX 4070"
-                srcset="/assets/images/nvidia-rtx-4070.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4070</h3>
-        </a>
-        <a href="/articles/nvidia/rtx/40/70-ti/" class="card">
-            <div class="card-img-container">
-            <img src="/assets/images/nvidia-rtx-4070-ti.png" alt="Image de la MSI GeForce RTX 4070 Ti SUPPRIM X 12 Go"
-                srcset="/assets/images/nvidia-rtx-4070-ti.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4070 Ti</h3>
-        </a>
-        <a href="/articles/nvidia/rtx/40/80/" class="card">
-            <div class="card-img-container">
-                <img src="/assets/images/nvidia-rtx-4080.png" alt="Image de la NVIDIA GeForce RTX 4080"
-                    srcset="/assets/images/nvidia-rtx-4080.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4080</h3>
-        </a>
-        <a href="/articles/nvidia/rtx/40/90/" class="card">
-            <div class="card-img-container">
-            <img src="/assets/images/nvidia-rtx-4090.png" alt="Image de la NVIDIA GeForce RTX 4090"
-                srcset="/assets/images/nvidia-rtx-4090.png" class="cards-img">
-            </div>
-            <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                srcset="/assets/svg/cards-line.svg" class="cards-line">
-            <h3 class="">NVIDIA GeForce RTX 4090</h3>
+        <?php
+        include(dirname(__FILE__, 2) . "/assets/src/connection.php");
+
+        // Récupérer la requête de recherche de l'utilisateur
+        if (isset($_GET["q"])) {
+            $recherche = $_GET["q"];
+            // Échapper les caractères spéciaux pour éviter les failles SQL
+            $recherche = mysqli_real_escape_string($conn, $recherche);
+
+            // Requête SQL pour rechercher des articles
+            $query = "SELECT * FROM `graphics_cards` WHERE card_name LIKE '%$recherche%' OR card_id LIKE '%$recherche%'";
+
+            // Exécuter la requête
+            $result = mysqli_query($conn, $query);
+            // Afficher les résultats
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $img_link = str_replace("_", "-", $row["card_id"]);
+                    $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
+                    $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+                }
+            } else {
+                echo "Aucune carte graphique trouvée avec cet identifiant.";
+            }
+            $conn->close();
+        }
+        ?>
     </section>
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>

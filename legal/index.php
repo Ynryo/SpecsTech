@@ -9,9 +9,9 @@
     <meta name="description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
     <meta property="og:title" content="Mentions légales ǀ SpecsTech" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://specstech.fr/legal" />
+    <meta property="og:url" content="https://specstech.fr/legal/" />
     <meta property="og:description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
-    <link rel="canonical" href="https://specstech.fr/legal">
+    <link rel="canonical" href="https://specstech.fr/legal/">
     <link rel="stylesheet" type="text/css" href="/assets/css/about.css">
     <?php include(dirname(__FILE__, 2) . '/assets/src/assets.php') ?>
 </head>
@@ -34,10 +34,9 @@
         <h3>Données personnelles</h3>
         <p>Votre adresse IP et le lien de la page visitée sont des informations personnelles enregistrées sur
             le serveur qui héberge ce site. Ces données peuvent servir à diagnostiquer un problème, mais
-            elles ne seront jamais transmises à des services tiers et sont supprimées automatiquement au bout d'un
-            certain temps. Pour toute demande liée
+            elles ne seront jamais transmises à des services tiers. Pour toute demande liée
             aux données personnelles, nous vous demandons de nous contacter par <a href="/contact/"
-                class="link">mail</a>.</p>
+                class="link">mail</a> et de mettre en objet : Réclamation données personnelles.</p>
     </section>
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>

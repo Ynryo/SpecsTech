@@ -37,3 +37,8 @@
     left: 0;
     right: auto;
 }
+
+.nolink {
+    text-decoration: none;
+    color: #fff;
+}

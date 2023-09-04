@@ -9,7 +9,7 @@ header {
 
 header h1 {
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 20px;
     box-sizing: border-box;
     display: block;
@@ -29,6 +29,12 @@ header h1 {
     z-index: -1;
 } */
 
+header form {
+    margin: 0 20px;
+    flex: 1;
+    /* display: none; */
+}
+
 header form input {
     border: none;
     background-color: var(--second-theme-color);
@@ -40,11 +46,6 @@ header form input {
     color: #fff;
     outline: none;
     width: 100%;
-}
-
-header form {
-    margin: 0 20px;
-    flex: 1;
 }
 
 #search-list {

@@ -1,10 +1,10 @@
 <header>
-    <div class="icon">
-        <h1>Specs-Tech</h1>
+    <a class="icon nolink" href="/">
+        <h1>SpecsTech</h1>
         <!-- <img src="/assets/icons-assets/gradient-shadow.png"> -->
-    </div>
-    <form novalidate method="post" action="/search/?">
-        <input type="search" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="search" role="combobox" aria-roledescription="combobox">
+    </a>
+    <form method="get" action="/search/">
+        <input type="search" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="q" role="combobox" aria-roledescription="combobox">
     </form>
     <nav>
         <ul>
@@ -20,8 +20,8 @@
         <div class="bar3"></div>
     </div>
     <div class="menu" id="menu">
-        <form>
-            <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="search" role="combobox" aria-roledescription="combobox">
+        <form method="get" action="/search/">
+            <input type="text" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="q" role="combobox" aria-roledescription="combobox">
         </form>
         <nav>
             <ul>
