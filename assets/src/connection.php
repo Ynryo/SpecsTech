@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1:3306";
 $username = "qgkenujx_admin";
-$password = "c4;,pp9,^&pscpCbWC";
+$password = "&roF)gO&.gfr7%&4rt";
 $dbname = "qgkenujx_main";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

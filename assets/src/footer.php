@@ -9,19 +9,7 @@
 <script type="text/javascript" src="/assets/js/search.js"></script>
 
 <?php
-
-// Connexion à la base de données (remplace les paramètres par les tiens)
-$servername = "127.0.0.1:3306";
-$username = "qgkenujx_admin";
-$password = "c4;,pp9,^&pscpCbWC";
-$dbname = "qgkenujx_main";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée : " . $conn->connect_error);
-}
+include("connection.php");
 
 // Vérifier si la table existe, sinon la créer
 $table_name = "table_visiteurs";

@@ -33,8 +33,7 @@
                         N'hésitez pas à me contacter pour s'il manque certaines cartes graphiques.</p>
                     <br>
                     <p>Pour retrouver les spécifications techniques de vos cartes graphiques, vous pouvez rechercher le
-                        nom de celle-ci dans la barre de recherche ou fouiller dans la section <a href="/articles/"
-                            class="link">articles</a>.</p>
+                        nom de celle-ci dans la barre de recherche ou fouiller dans la section <a href="/articles/" class="link">articles</a>.</p>
                     <a class="button" id="cta-button-close">Fermer</a>
                 </div>
             </div>
@@ -43,42 +42,31 @@
 
     <section class="main">
         <h2>Dernières cartes graphiques</h2>
-        <div class="last-article">
-            <h3>NVIDIA GeForce RTX 4090</h3>
-            <div class="desc">
-                <p>Décrouvrez les spécifications techniques de la GeForce RTX 4090 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4090.png" alt="NVIDIA GeForce RTX 4070"></img>
-            </div>
-            <div class="article-footer">
-                <a href="/articles/nvidia/rtx/40/90/" class="read-more">Voir les spécifications</a>
-                <img src="/assets/svg/articles-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                    srcset="/assets/svg/articles-line.svg" class="articles-line">
-            </div>
-        </div>
-        <div class="last-article">
-            <h3>NVIDIA GeForce RTX 4080</h3>
-            <div class="desc">
-                <p>Décrouvrez les spécifications techniques de la GeForce RTX 4080 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4080.png" alt="NVIDIA GeForce RTX 4080"></img>
-            </div>
-            <div class="article-footer">
-                <a href="/articles/nvidia/rtx/40/80/" class="read-more">Voir les spécifications</a>
-                <img src="/assets/svg/articles-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                    srcset="/assets/svg/articles-line.svg" class="articles-line">
-            </div>
-        </div>
-        <div class="last-article">
-            <h3>NVIDIA GeForce RTX 4070</h3>
-            <div class="desc">
-                <p>Décrouvrez les spécifications techniques de la GeForce RTX 4070 de NVIDIA.</p>
-                <img class="articles-img" src="/assets/images/3d/nvidia-rtx-4070.png" alt="NVIDIA GeForce RTX 4090"></img>
-            </div>
-            <div class="article-footer">
-                <a href="/articles/nvidia/rtx/40/70/" class="read-more">Voir les spécifications</a>
-                <img src="/assets/svg/articles-line.svg" alt="Trait de séparation en forme de vague irrégulière"
-                    srcset="/assets/svg/articles-line.svg" class="articles-line">
-            </div>
-        </div>
+        <?php
+        include(dirname(__FILE__, 1) . '/assets/src/connection.php');
+        $sql = "SELECT * FROM `graphics_cards` ORDER BY `graphics_cards`.`release_date` DESC LIMIT 3";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $img_link = $row["card_id"];
+                $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
+                $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                echo '<a href="/articles' . $card_link . '" class="last-article nolink">
+                        <div class="content">
+                            <div class="desc">
+                                <h3>' . $row["card_name"] . '</h3>
+                                <p>Décrouvrez les spécifications techniques de la ' . $row["card_name"] . '.</p>
+                            <div href="/articles' . $card_link . '" class="button">Voir les spécifications</div>
+                            </div>
+                            <img class="articles-img" src=/assets/images/' . $img_link . '.png alt="' . $row["card_name"] . '"></img>
+                        </div>
+                    </a>';
+            }
+        } else {
+            echo "Aucun article.";
+        }
+        $conn->close();
+        ?>
     </section>
 
     <?php include(dirname(__FILE__, 1) . '/assets/src/footer.php') ?>

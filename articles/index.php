@@ -26,19 +26,36 @@
             <p>Retrouvez les informations techniques de chaque carte graphique.</p>
         </div>
     </section>
-    
-     <section class="main">
-        <div class="cards-section-top">
-           <!-- <select id="cards-sort">
+
+    <section class="main cards">
+        <?php
+        include(dirname(__FILE__, 2) . "/assets/src/connection.php");
+        $sql = "SELECT * FROM `graphics_cards`";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $img_link = $row["card_id"];
+                $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
+                $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+            }
+        } else {
+            echo "Aucun article.";
+        }
+        $conn->close();
+        ?>
+
+        <!-- <div class="cards-section-top">
+            <select id="cards-sort">
                 <optgroup>
                     <option value="date-ascend">Date de sortie (récente/ancienne)</option>
                     <option value="date-descent">Date de sortie (ancienne/récente)</option>
                     <option value="name-ascend">Nom (A/Z)</option>
                     <option value="name-descent">Nom (Z/A)</option>
                 </optgroup>
-            </select> -->
-        </div>
-        <div class="cards">
+            </select>
+        </div> -->
+        <!-- <div class="cards">
             <a href="/articles/nvidia/rtx/30/50/" class="card">
                 <div class="card-img-container">
                     <img src="/assets/images/nvidia-rtx-3050.png" alt="Image de la Asus ROG STRIX GeForce RTX 3050 OC Edition" srcset="/assets/images/nvidia-rtx-3050.png" class="cards-img">
@@ -144,7 +161,7 @@
                 <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
                 <h3 class="">NVIDIA GeForce RTX 4090</h3>
             </a>
-        </div>
+        </div> -->
     </section>
 
 

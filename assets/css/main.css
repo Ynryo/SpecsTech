@@ -70,7 +70,7 @@ body {
 .main {
     position: relative;
     background-color: var(--second-theme-color);
-    padding: 50px 50px 50px 100px;
+    padding: 50px 50px 50px 50px;
     margin: 0 auto;
     /* min-height: calc(100% - 58px) !important; */
 }
@@ -87,7 +87,7 @@ body {
 
 .main p {
     font-size: 18px;
-    margin: 0 50px 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .last-article {
@@ -118,10 +118,27 @@ body {
     max-width: 400px;
 }
 
-.last-article .desc {
+.last-article {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--third-theme-color);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.last-article .content {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+}
+
+.last-article .content div {
+    margin-top: 20px;
+}
+
+.last-article .desc {
+    display: flex;
+    flex-direction: column;
 }
 
 .last-article .articles-img {

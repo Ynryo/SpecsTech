@@ -1,3 +1,4 @@
+<meta property="og:site_name" content="SpecsTech">
 <link rel="icon" type="image/png" href="/assets/favicon/favicon-50x50.png">
 <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/link.css">

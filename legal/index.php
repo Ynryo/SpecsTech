@@ -28,15 +28,15 @@
 
     <section class="main legal">
         <h3>Mentions légales</h3>
-        <p>Ce site est édité par Ynryo et hébergé par la société PLANETHOSTER (adresse : 4416 Louis B. Mayer, Laval,
-            Québec,
-            Canada, H7P 0G1, téléphone : 1-855-774-4678), depuis juillet 2023.<br>Tous droits réservés.</p>
+        <p>Ce site est édité par <a href="mailto://aaron@specstech.fr" class="link">Aaron LOPEZ</a> et hébergé par la société PLANETHOSTER (adresse : 4416 Louis B. Mayer, Laval, Québec, Canada, H7P 0G1, téléphone : 1-855-774-4678), depuis juillet 2023.<br>Tous droits réservés.</p>
         <h3>Données personnelles</h3>
-        <p>Votre adresse IP et le lien de la page visitée sont des informations personnelles enregistrées sur
+        <p>Votre adresse IP, le lien de la page visitée, la date et l'heure de la visite sont des informations personnelles enregistrées sur
             le serveur qui héberge ce site. Ces données peuvent servir à diagnostiquer un problème, mais
             elles ne seront jamais transmises à des services tiers. Pour toute demande liée
-            aux données personnelles, nous vous demandons de nous contacter par <a href="/contact/"
-                class="link">mail</a> et de mettre en objet : Réclamation données personnelles.</p>
+            aux données personnelles, nous vous demandons de nous contacter par <a href="/contact/" class="link">mail</a> et de mettre en objet : Réclamation données personnelles.</p>
+
+
+            
     </section>
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>
