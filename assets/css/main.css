@@ -106,19 +106,16 @@ body {
     flex-direction: column;
 }
 
-.frame {
-    margin-bottom: 50px;
-    border-radius: 5px;
-    display: flex;
-}
-
 .articles-line {
     margin-top: 50px;
     max-width: 400px;
 }
 
 .frame {
+    display: flex;
+    margin-bottom: 50px;
     padding: 20px;
+    border-radius: 5px;
     border-radius: 10px;
     background-color: var(--third-theme-color);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);

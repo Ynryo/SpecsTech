@@ -1,7 +1,5 @@
 <footer>
-    <p>&copy;
-        <script>document.write(new Date().getFullYear())</script> SpecsTech. Tous droits réservés. <a href="/legal/"
-            class="link">Mentions légales</a>
+    <p>&copy; <?php echo date("Y") ?> SpecsTech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a>
     </p>
 </footer>
 
@@ -35,20 +33,21 @@ if ($result_check_table->num_rows == 0) {
 }
 
 // Fonction pour obtenir l'adresse IP du visiteur
-function get_client_ip() {
+function get_client_ip()
+{
     $ipaddress = '';
 
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
-    else if(getenv('HTTP_X_FORWARDED_FOR'))
+    else if (getenv('HTTP_X_FORWARDED_FOR'))
         $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-    else if(getenv('HTTP_X_FORWARDED'))
+    else if (getenv('HTTP_X_FORWARDED'))
         $ipaddress = getenv('HTTP_X_FORWARDED');
-    else if(getenv('HTTP_FORWARDED_FOR'))
+    else if (getenv('HTTP_FORWARDED_FOR'))
         $ipaddress = getenv('HTTP_FORWARDED_FOR');
-    else if(getenv('HTTP_FORWARDED'))
+    else if (getenv('HTTP_FORWARDED'))
         $ipaddress = getenv('HTTP_FORWARDED');
-    else if(getenv('REMOTE_ADDR'))
+    else if (getenv('REMOTE_ADDR'))
         $ipaddress = getenv('REMOTE_ADDR');
     else
         $ipaddress = 'UNKNOWN';
