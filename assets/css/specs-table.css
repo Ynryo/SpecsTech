@@ -48,6 +48,33 @@
     width: 100%;
 }
 
+.main-specs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 5px;
+    max-width: 160px;
+    width: 100%;
+}
+
+.spec img {
+    padding: 0 20px 20px 0;
+    filter: invert(1);
+    max-width: 70px;
+}
+
+.spec strong {
+    margin-bottom: 10px;
+}
+
 .contact {
     margin-top: 75px;
     display: flex;

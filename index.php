@@ -44,14 +44,14 @@
         <h2>Dernières cartes graphiques</h2>
         <?php
         include(dirname(__FILE__, 1) . '/assets/src/connection.php');
-        $sql = "SELECT * FROM `graphics_cards` ORDER BY `graphics_cards`.`release_date` DESC LIMIT 3";
+        $sql = "SELECT * FROM `graphics_cards` ORDER BY `graphics_cards`.`release_date` DESC LIMIT 5";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $img_link = $row["card_id"];
                 $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
                 $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                echo '<a href="/articles' . $card_link . '" class="last-article nolink">
+                echo '<a href="/articles' . $card_link . '" class="frame nolink">
                         <div class="content">
                             <div class="desc">
                                 <h3>' . $row["card_name"] . '</h3>

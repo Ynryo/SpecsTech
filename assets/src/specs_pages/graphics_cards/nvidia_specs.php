@@ -1,6 +1,28 @@
+<div class="frame main-specs">
+    <div class="spec">
+        <img src="/assets/icons-assets/proccesor.png" alt="Architecture">
+        <strong class="block-name">Architecture</strong>
+        <span class="block-value"><?php echo $row['architecture'] ?></span>
+    </div>
+    <div class="spec">
+        <img src="/assets/icons-assets/frequency.png" alt="Architecture">
+        <strong class="block-name">Fréquence de base</strong>
+        <span class="block-value"><?php echo $row['frequency'] ?> GHz</span>
+    </div>
+    <div class="spec">
+        <img src="/assets/icons-assets/ram.png" alt="Architecture">
+        <strong class="block-name">Mémoire vidéo</strong>
+        <span class="block-value"><?php echo $row['vram'] ?> Go</span>
+    </div>
+    <div class="spec">
+        <img src="/assets/icons-assets/ram.png" alt="Architecture">
+        <strong class="block-name">Type de mémoire</strong>
+        <span class="block-value"><?php echo $row['memory_type'] ?></span>
+    </div>
+</div>
 <div class="product">
     <div class="specs">
-        <h2>Informations techniques</h2>
+        <br>
         <div class="table">
             <h3>Performances</h3>
             <div class="table-row">
