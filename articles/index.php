@@ -35,10 +35,10 @@
         if ($sort !== "default" and $sort !== "") {
             if ($sort == "date-asc") {
                 $sort_column = "release_date";
-                $order = "ASC";
+                $order = "DESC";
             } elseif ($sort == "date-desc") {
                 $sort_column = "release_date";
-                $order = "DESC";
+                $order = "ASC";
             } elseif ($sort == "name-asc") {
                 $sort_column = "card_name";
                 $order = "ASC";
@@ -55,7 +55,7 @@
     }
     $result = $conn->query($sql);
     ?>
-    <section class="main cards">
+    <section class="main">
         <div class="cards-section-top">
             <select id="cards-sort">
                 <optgroup>
@@ -76,19 +76,21 @@
             </select>
         </div>
 
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $img_link = $row["card_id"];
-                $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
-                $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+        <div class="cards">
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $img_link = $row["card_id"];
+                    $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
+                    $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+                }
+            } else {
+                echo "Aucun article.";
             }
-        } else {
-            echo "Aucun article.";
-        }
-        $conn->close();
-        ?>
+            $conn->close();
+            ?>
+        </div>
     </section>
 
 
