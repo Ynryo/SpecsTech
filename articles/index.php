@@ -26,12 +26,57 @@
             <p>Retrouvez les informations techniques de chaque carte graphique.</p>
         </div>
     </section>
+    <?php
+    include(dirname(__FILE__, 2) . "/assets/src/connection.php");
 
-    <section class="main cards">
-        <?php
-        include(dirname(__FILE__, 2) . "/assets/src/connection.php");
+    $sort = "";
+    if (isset($_GET["sort"])) {
+        $sort = $_GET["sort"];
+        if ($sort !== "default" and $sort !== "") {
+            if ($sort == "date-asc") {
+                $sort_column = "release_date";
+                $order = "ASC";
+            } elseif ($sort == "date-desc") {
+                $sort_column = "release_date";
+                $order = "DESC";
+            } elseif ($sort == "name-asc") {
+                $sort_column = "card_name";
+                $order = "ASC";
+            } elseif ($sort == "name-desc") {
+                $sort_column = "card_name";
+                $order = "DESC";
+            }
+            $sql = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
+        } else {
+            $sql = "SELECT * FROM `graphics_cards`";
+        }
+    } else {
         $sql = "SELECT * FROM `graphics_cards`";
-        $result = $conn->query($sql);
+    }
+    $result = $conn->query($sql);
+    ?>
+    <section class="main cards">
+        <div class="cards-section-top">
+            <select id="cards-sort">
+                <optgroup>
+                    <option value="default">Trier les produits</option>
+                    <option value="date-asc" <?php if ($sort == "date-asc") {
+                                                    echo "selected=\"selected\"";
+                                                } ?>>Date de sortie (récente/ancienne)</option>
+                    <option value="date-desc" <?php if ($sort == "date-desc") {
+                                                    echo "selected=\"selected\"";
+                                                } ?>>Date de sortie (ancienne/récente)</option>
+                    <option value="name-asc" <?php if ($sort == "name-asc") {
+                                                    echo "selected=\"selected\"";
+                                                } ?>>Nom (A/Z)</option>
+                    <option value="name-desc" <?php if ($sort == "name-desc") {
+                                                    echo "selected=\"selected\"";
+                                                } ?>>Nom (Z/A)</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $img_link = $row["card_id"];
@@ -44,124 +89,6 @@
         }
         $conn->close();
         ?>
-
-        <!-- <div class="cards-section-top">
-            <select id="cards-sort">
-                <optgroup>
-                    <option value="date-ascend">Date de sortie (récente/ancienne)</option>
-                    <option value="date-descent">Date de sortie (ancienne/récente)</option>
-                    <option value="name-ascend">Nom (A/Z)</option>
-                    <option value="name-descent">Nom (Z/A)</option>
-                </optgroup>
-            </select>
-        </div> -->
-        <!-- <div class="cards">
-            <a href="/articles/nvidia/rtx/30/50/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3050.png" alt="Image de la Asus ROG STRIX GeForce RTX 3050 OC Edition" srcset="/assets/images/nvidia-rtx-3050.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3050</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/60/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3060.png" alt="Image de la NVIDIA GeForce RTX 3060" srcset="/assets/images/nvidia-rtx-3060.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3060</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/60-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3060-ti.png" alt="Image de la NVIDIA GeForce RTX 3060 Ti" srcset="/assets/images/nvidia-rtx-3060-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3060 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/70/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3070.png" alt="Image de la NVIDIA GeForce RTX 3070" srcset="/assets/images/nvidia-rtx-3070.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3070</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/70-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3070-ti.png" alt="Image de la NVIDIA GeForce RTX 3070 Ti" srcset="/assets/images/nvidia-rtx-3070-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3070 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/80/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3080.png" alt="Image de la NVIDIA GeForce RTX 3080" srcset="/assets/images/nvidia-rtx-3080.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3080</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/80-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3080-ti.png" alt="Image de la NVIDIA GeForce RTX 3080 Ti" srcset="/assets/images/nvidia-rtx-3080-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3080 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/90/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3090.png" alt="Image de la NVIDIA GeForce RTX 3090" srcset="/assets/images/nvidia-rtx-3090.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3090</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/30/90-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-3090-ti.png" alt="Image de la NVIDIA GeForce RTX 3090 Ti" srcset="/assets/images/nvidia-rtx-3090-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 3090 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/60/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4060.png" alt="Image de la MSI GeForce RTX 4060 GAMING X 8 Go" srcset="/assets/images/nvidia-rtx-4060.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4060</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/60-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4060-ti.png" alt="Image de la NVIDIA GeForce RTX 4060 Ti" srcset="/assets/images/nvidia-rtx-4060-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4060 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/70/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4070.png" alt="Image de la NVIDIA GeForce RTX 4070" srcset="/assets/images/nvidia-rtx-4070.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4070</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/70-ti/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4070-ti.png" alt="Image de la MSI GeForce RTX 4070 Ti SUPPRIM X 12 Go" srcset="/assets/images/nvidia-rtx-4070-ti.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4070 Ti</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/80/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4080.png" alt="Image de la NVIDIA GeForce RTX 4080" srcset="/assets/images/nvidia-rtx-4080.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4080</h3>
-            </a>
-            <a href="/articles/nvidia/rtx/40/90/" class="card">
-                <div class="card-img-container">
-                    <img src="/assets/images/nvidia-rtx-4090.png" alt="Image de la NVIDIA GeForce RTX 4090" srcset="/assets/images/nvidia-rtx-4090.png" class="cards-img">
-                </div>
-                <img src="/assets/svg/cards-line.svg" alt="Trait de séparation en forme de vague irrégulière" srcset="/assets/svg/cards-line.svg" class="cards-line">
-                <h3 class="">NVIDIA GeForce RTX 4090</h3>
-            </a>
-        </div> -->
     </section>
 
 
