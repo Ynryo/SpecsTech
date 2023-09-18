@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Rechercher ǀ Specs-Tech</title>
+    <title>SpecsTech - Rechercher</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="SpecsTech" />
     <meta name="description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
-    <meta property="og:title" content="Rechercher ǀ SpecsTech" />
+    <meta property="og:title" content="SpecsTech - Rechercher" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://specstech.fr/search/" />
     <meta property="og:description" content="Retrouvez toutes les informations techniques de vos cartes graphiques">
