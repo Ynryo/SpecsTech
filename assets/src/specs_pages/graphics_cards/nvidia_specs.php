@@ -138,8 +138,8 @@
                 <span class="block-value"><?php echo $row['broadcast'] ?></span>
             </div>
             <div class="table-row">
-                <span class="block-name">PCI Express Gen 4</span>
-                <span class="block-value"><?php echo $row['pcie_gen4'] ?></span>
+                <span class="block-name">PCI Express</span>
+                <span class="block-value"><?php echo $row['pcie'] ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Resizable BAR</span>
