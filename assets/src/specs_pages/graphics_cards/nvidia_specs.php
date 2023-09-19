@@ -92,15 +92,15 @@
             <h3>Caractéristiques physiques</h3>
             <div class="table-row">
                 <span class="block-name">Longueur</span>
-                <span class="block-value"><?php echo $row['length'] ?> mm</span>
+                <span class="block-value"><?php echo $row['length'];if(is_numeric($row['length'])){echo " mm";} ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Largeur</span>
-                <span class="block-value"><?php echo $row['width'] ?> mm</span>
+                <span class="block-value"><?php echo $row['width'];if(is_numeric($row['width'])){echo " mm";} ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Epaisseur</span>
-                <span class="block-value"><?php echo $row['thickness'] ?> slots</span>
+                <span class="block-value"><?php echo $row['thickness'];if(is_numeric($row['thickness'])){echo " slots";} ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Type de refroidissement</span>
