@@ -182,8 +182,8 @@
                 <span class="block-value"><?php echo $row['omniverse'] ?></span>
             </div>
             <div class="table-row">
-                <span class="block-name">Microsoft DirectX&copy; 12 Ultimate</span>
-                <span class="block-value"><?php echo $row['directx12_ulti'] ?></span>
+                <span class="block-name">Microsoft DirectX&copy;</span>
+                <span class="block-value"><?php echo $row['directx'] ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">NVIDIA GPU Boost&trade;</span>
