@@ -58,7 +58,7 @@
                                 <p>Décrouvrez les spécifications techniques de la ' . $row["card_name"] . '.</p>
                             <div href="/articles' . $card_link . '" class="button">Voir les spécifications</div>
                             </div>
-                            <img class="articles-img" src=/assets/images/' . $img_link . '.png alt="' . $row["card_name"] . '"></img>
+                            <img class="articles-img" src=/assets/images/nvidia/' . $img_link . '.png alt="' . $row["card_name"] . '"></img>
                         </div>
                     </a>';
             }

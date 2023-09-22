@@ -216,6 +216,6 @@
         </div>
     </div>
     <div class="product-img">
-        <img srcset="/assets/images/3d/<?php echo $id ?>.png" src="/assets/images/3d/<?php echo $id ?>.png" alt="Image de la <?php echo $row['card_name'] ?>">
+        <img srcset="/assets/images/nvidia/3d/<?php echo $id ?>.png" src="/assets/images/nvidia/3d/<?php echo $id ?>.png" alt="Image de la <?php echo $row['card_name'] ?>">
     </div>
 </div>
