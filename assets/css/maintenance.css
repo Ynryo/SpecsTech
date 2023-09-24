@@ -1,3 +1,89 @@
 body {
     background-color: #000 !important;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+.main {
+    padding: 250px 15% 0 15%;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 100px;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+.colored-logo {
+    background-image: -webkit-linear-gradient(to right, #1900ff, #d400ff);
+    background-image: linear-gradient(to right, #1900ff, #d400ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media all and (max-width:1200px) {
+    .main {
+        padding: 250px 75px 0 75px;
+    }
+}
+
+@media all and (max-width:1000px) {
+    .main {
+        padding: 150px 20px 0 20px;
+    }
+}
+
+@media all and (max-width:900px) {
+    h2 {
+        font-size: 75px;
+    }
+}
+
+@media all and (max-width:600px) {
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width:400px) {
+    .main {
+        padding-top: 75px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-height:600px) {
+    .main {
+        padding-top: 50px;
+    }
+}
+
+@media all and (max-height:400px) {
+    .main {
+        padding-top: 0;
+    } 
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 15px;
+    }
 }
