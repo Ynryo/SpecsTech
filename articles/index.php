@@ -46,14 +46,14 @@
                 $sort_column = "card_name";
                 $order = "DESC";
             }
-            $sql = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
+            $sql_srt = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
         } else {
-            $sql = "SELECT * FROM `graphics_cards`";
+            $sql_srt = "SELECT * FROM `graphics_cards`";
         }
     } else {
-        $sql = "SELECT * FROM `graphics_cards`";
+        $sql_srt = "SELECT * FROM `graphics_cards`";
     }
-    $result = $conn->query($sql);
+    $result_srt = $conn->query($sql_srt);
     ?>
     <section class="main">
         <div class="cards-section-top">
@@ -74,28 +74,35 @@
                                                 } ?>>Nom (Z/A)</option>
                 </optgroup>
             </select>
+            <script text="text/javascript" src="/assets/js/sorting.js"></script>
         </div>
 
-        <div class="cards">
-            <?php
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $img_link = $row["card_id"];
-                    $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
-                    $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+        <div class="cards-section-main">
+            <div class="cards-filter frame">
+                <?php include(dirname(__FILE__, 2) . '/assets/src/filter_files/filters.php') 
+                ?>
+            </div>
+            <div class="cards">
+                <?php
+                if ($result_srt->num_rows > 0) {
+                    while ($row_srt = $result_srt->fetch_assoc()) {
+                        $img_link = $row_srt["card_id"];
+                        $card_id_split = explode("/", "/" . str_replace("_", "/", $row_srt["card_id"]) . "/");
+                        $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                        echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row_srt["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_srt["card_name"] . "</h3></a>";
+                    }
+                } else {
+                    echo "Aucun article.";
                 }
-            } else {
-                echo "Aucun article.";
-            }
-            $conn->close();
-            ?>
+                $conn->close();
+                ?>
+            </div>
+
         </div>
     </section>
 
 
     <?php include(dirname(__FILE__, 2) . '/assets/src/footer.php') ?>
-    <script text="text/javascript" src="/assets/js/sorting.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
                     $img_link = $row["card_id"];
                     $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
                     $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
                 }
             } else {
                 echo "Aucune carte graphique trouvée avec cet identifiant.";

@@ -12,7 +12,7 @@
     max-width: 500px;
     border-radius: 10px;
     padding-left: 10px;
-    margin: 10px;
+    margin: 10px 20px 10px 10px;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     outline: none;
@@ -22,4 +22,61 @@
 
 .cards-section-top select option {
     margin: 10px;
+}
+
+.cards-section-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards-section-main .cards-filter {
+    flex-direction: column;
+    margin: 20px;
+    min-width: 250px;
+    height: 100%;
+}
+
+.cards-filter .filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-filter .filter .flt-item {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.cards-filter h1 {
+    font-size: 20px;
+}
+
+.cards-filter h2.flt-name {
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+
+.cards-filter h3.flt-item-name {
+    display: flex;
+    font-size: 14px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 10px;
+}
+
+h2.flt-name, h3.flt-item-name {
+    font-weight: 500;
+    margin: 0;
+}
+
+.flt-item input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.cards-filter input[type="range"] {
+    width: 100%;
 }
