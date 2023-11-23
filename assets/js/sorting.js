@@ -1,6 +1,14 @@
 const sort = document.getElementById("cards-sort")
-let url = window.location.origin + window.location.pathname
+const params = [];
 
 sort.addEventListener("change", () => {
-    window.location.href = url + "?sort=" + sort.value
+    // params.push(`sort=${sort.value}`);
+    // window.location.href = `${window.location.pathname}?${params.join('&')}`;
+
+    // Construire les paramètres de l'URL
+    params.push(`${sort.value}=true`);
+
+    // Mettre à jour l'URL avec les paramètres
+    const newURL = `${window.location.pathname}?${params.join('&')}`;
+    history.pushState({}, '', newURL);
 })
