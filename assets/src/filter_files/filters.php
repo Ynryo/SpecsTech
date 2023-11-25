@@ -3,11 +3,11 @@
 
 $flts = [["manufacturer", "Fabricant", ""], ["vram", "Mémoire vidéo", " Go"], ["memory_type", "Type de mémoire", ""], ["max_display_size", "Définition maximale d'affichage", " pixels"], ["max_screens", "Nombre d'écran maximum", ""], ["cooling", "Refroidissement", ""]];
 
-foreach ($flts as $flt) {
-    if (!isset($flt[0])){
-        echo $flt[0];
-    }
-}
+// foreach ($flts as $flt) {
+//     if (!isset($flt[0])){
+//         echo $flt[0];
+//     }
+// }
 
 
 foreach ($flts as $flt) {
