@@ -3,24 +3,35 @@
 
 $flts = [["manufacturer", "Fabricant", ""], ["vram", "Mémoire vidéo", " Go"], ["memory_type", "Type de mémoire", ""], ["max_display_size", "Définition maximale d'affichage", " pixels"], ["max_screens", "Nombre d'écran maximum", ""], ["cooling", "Refroidissement", ""]];
 
-// foreach ($flts as $flt) {
-//     if (!isset($flt[0])){
-//         echo $flt[0];
-//     }
-// }
-
-
+//create filters in relation to db
 foreach ($flts as $flt) {
+
+    // echo $_SERVER["QUERY_STRING"];
+
     $sql_flt = "SELECT DISTINCT $flt[0] FROM graphics_cards ORDER BY $flt[0] DESC";
     $result_flt = $conn->query($sql_flt);
+
+    //print chaque catégorie (filtres)
     if ($result_flt->num_rows > 0) {
         echo "<div class=\"filter\"><h2 class=\"flt-name\">" . $flt[1] . "</h2>";
+
+        //print chaque valeur de filtre (chaque checkbox)
         while ($row_flt = $result_flt->fetch_assoc()) {
-            echo "<div class=\"flt-item\"><input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"><h3 class=\"flt-item-name\">" . $row_flt[$flt[0]] . $flt[2] . "</h3></div>";
+            echo "<div class=\"flt-item\"><input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "[]\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"";
+
+            // Vérifie si le filtre est présent dans les paramètres de l'URL
+            if (isset($_GET[$flt[0]]) && in_array($row_flt[$flt[0]], explode(',', $_GET[$flt[0]]))) {
+                echo ' checked';
+            }
+
+            echo "><h3 class=\"flt-item-name\">" . $row_flt[$flt[0]] . $flt[2] . "</h3></div>";
         }
+
         echo "</div>";
     }
 }
+
+//SELECT DISTINCT $flt[0] FROM graphics_cards WHERE `graphics_cards`.$flt[0] = $row_flt[$flt[0]] ORDER BY $flt[0] DESC
 ?>
-<a class="button btn-small" id="flts-apply">Appliquer</a>
+<a class="button btn-small" id="flts-apply">Appliquer (beta)</a>
 <script type="text/javascript" src="/assets/js/filters.js"></script>
