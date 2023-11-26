@@ -60,18 +60,10 @@
             <select id="cards-sort">
                 <optgroup>
                     <option value="default">Trier les produits</option>
-                    <option value="date-asc" <?php if ($sort == "date-asc") {
-                                                    echo "selected=\"selected\"";
-                                                } ?>>Date de sortie (récente/ancienne)</option>
-                    <option value="date-desc" <?php if ($sort == "date-desc") {
-                                                    echo "selected=\"selected\"";
-                                                } ?>>Date de sortie (ancienne/récente)</option>
-                    <option value="name-asc" <?php if ($sort == "name-asc") {
-                                                    echo "selected=\"selected\"";
-                                                } ?>>Nom (A/Z)</option>
-                    <option value="name-desc" <?php if ($sort == "name-desc") {
-                                                    echo "selected=\"selected\"";
-                                                } ?>>Nom (Z/A)</option>
+                    <option value="date-asc" <?php if ($sort == "date-asc") echo "selected"; ?>>Date de sortie (récente/ancienne)</option>
+                    <option value="date-desc" <?php if ($sort == "date-desc") echo "selected"; ?>>Date de sortie (ancienne/récente)</option>
+                    <option value="name-asc" <?php if ($sort == "name-asc") echo "selected"; ?>>Nom (A/Z)</option>
+                    <option value="name-desc" <?php if ($sort == "name-desc") echo "selected"; ?>>Nom (Z/A)</option>
                 </optgroup>
             </select>
             <script text="text/javascript" src="/assets/js/sorting.js"></script>
