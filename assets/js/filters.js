@@ -1,37 +1,47 @@
 const checkboxes = document.querySelectorAll('input[type="checkbox"].ckbx-flt');
-const currentValue = ""
+let currentValue = ""
+
 document.getElementById("flts-apply").addEventListener('click', () => {
-
+    let currentFilter = ""
+    let currentValue = ""
+    // let alreadyIn = ""
     checkboxes.forEach(checkbox => {
-        if (!checkbox.checked && urlParams.has(checkbox.dataset.flt, checkbox.dataset.value)) {
-
-            urlParams.delete(checkbox.dataset.flt, checkbox.dataset.value)
-        } else if (checkbox.checked && !urlParams.has(checkbox.dataset.flt, checkbox.dataset.value)) {
-
-            if (urlParams.has(checkbox.dataset.flt)) {
-                // PROBLEME JUSTE ICI 
-                currentValue = urlParams.get(checkbox.dataset.flt).split(",")
-                console.log(currentValue)
-                currentValue.forEach(value => {
-                    if (checkbox.dataset.value !== value) {
-                        urlParams.set(checkbox.dataset.flt, currentValue.join(",") + "," + checkbox.dataset.value)
-                    }
-                })
-                // urlParams.set(checkbox.dataset.flt, urlParams.get(checkbox.dataset.flt) + "," + checkbox.dataset.value)
-            } else {
-                urlParams.set(checkbox.dataset.flt, checkbox.dataset.value)
+        const checkboxName = checkbox.dataset.flt
+        const checkboxValue = checkbox.dataset.value
+        if (currentFilter !== checkboxName && urlParams.get(checkboxName) !== null) {
+            currentFilter = checkboxName
+            currentValue = urlParams.get(checkboxName).split(",")
+        }
+        // checkbox checked ?
+        if (checkbox.checked) {
+            if (!urlParams.has(checkboxName)) {
+                urlParams.set(checkboxName, checkboxValue)
+            } else if (urlParams.has(checkboxName)) {
+                if (!currentValue.includes(checkboxValue)) {
+                    currentValue.push(checkboxValue)
+                    urlParams.set(checkboxName, currentValue.join(","))
+                }
             }
-            // urlParams.append(checkbox.dataset.flt, checkbox.dataset.value)
+        } else if (!checkbox.checked) {
+            alreadyIn = "pas coché"
+            if (urlParams.has(checkboxName)) {
+                if (currentValue.includes(checkboxValue)) {
+                    currentValue.splice(currentValue.indexOf(checkboxValue), 1)
+                    urlParams.set(checkboxName, currentValue.join(","))
+                }
+            }
+        }
+        // delete flt if empty
+        if (urlParams.get(checkboxName) == "") {
+            urlParams.delete(checkboxName)
         }
     })
-    window.location.href = window.location.pathname + "?" + urlParams
+    // delete "?" if params size = 0
+    if (urlParams.size !== 0) {
+
+        window.location.href = window.location.pathname + "?" + urlParams
+    } else {
+
+        window.location.href = window.location.pathname
+    }
 });
-
-// window.addEventListener('load', () => {
-
-//     checkboxes.forEach(checkbox => {
-//         if (urlParams.has(checkbox.dataset.flt, checkbox.dataset.value)) {
-//             checkbox.checked = true;
-//         }
-//     });
-// });
