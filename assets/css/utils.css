@@ -80,3 +80,8 @@ h2.flt-name, h3.flt-item-name {
 .cards-filter input[type="range"] {
     width: 100%;
 }
+
+.cards-filter.frame .button {
+    max-width: none;
+    margin-top: 10px;
+}

@@ -30,6 +30,8 @@
     include(dirname(__FILE__, 2) . "/assets/src/connection.php");
 
     $sort = "";
+    $flts = [["manufacturer", "Fabricant", ""], ["vram", "Mémoire vidéo", " Go"], ["memory_type", "Type de mémoire", ""], ["max_display_size", "Définition maximale d'affichage", " pixels"], ["max_screens", "Nombre d'écran maximum", ""], ["cooling", "Refroidissement", ""]];
+
     if (isset($_GET["sort"])) {
         $sort = $_GET["sort"];
         if ($sort !== "default" and $sort !== "") {
@@ -46,14 +48,40 @@
                 $sort_column = "card_name";
                 $order = "DESC";
             }
-            $sql_srt = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
+            $sql_srt = " ORDER BY `$sort_column` $order";
         } else {
-            $sql_srt = "SELECT * FROM `graphics_cards`";
+            $sql_art = "SELECT * FROM `graphics_cards`";
+            $sql_srt = "";
         }
     } else {
-        $sql_srt = "SELECT * FROM `graphics_cards`";
+        $sql_art = "SELECT * FROM `graphics_cards`";
+        $sql_srt = "";
     }
-    $result_srt = $conn->query($sql_srt);
+
+    $sql_insert_where = "";
+    foreach ($flts as $flt) {
+        if (isset($_GET[$flt[0]])) {
+            $value = $_GET[$flt[0]];
+            if (str_contains($value, ",")) {
+                $value = "(" . $value . ")";
+                if ($sql_insert_where !== "") {
+                    $sql_insert_where .= " AND " . $flt[0] . " IN " . $value;
+                } else {
+                    $sql_insert_where = " WHERE " . $flt[0] . " IN " . $value;
+                }
+            } else {
+                $value = "'" . $value . "'";
+                if ($sql_insert_where !== "") {
+                    $sql_insert_where .= " AND " . $flt[0] . " = " . $value;
+                } else {
+                    $sql_insert_where = " WHERE " . $flt[0] . " = " . $value;
+                }
+            }
+        }
+    }
+    $sql_art = $sql_art . $sql_insert_where . $sql_srt;
+
+    $result_art = $conn->query($sql_art);
     ?>
     <section class="main">
         <div class="cards-section-top">
@@ -71,20 +99,20 @@
 
         <div class="cards-section-main">
             <div class="cards-filter frame">
-                <?php include(dirname(__FILE__, 2) . '/assets/src/filter_files/filters.php') 
+                <?php include(dirname(__FILE__, 2) . '/assets/src/filter_files/filters.php')
                 ?>
             </div>
             <div class="cards">
                 <?php
-                if ($result_srt->num_rows > 0) {
-                    while ($row_srt = $result_srt->fetch_assoc()) {
-                        $img_link = $row_srt["card_id"];
-                        $card_id_split = explode("/", "/" . str_replace("_", "/", $row_srt["card_id"]) . "/");
+                if ($result_art->num_rows > 0) {
+                    while ($row_art = $result_art->fetch_assoc()) {
+                        $img_link = $row_art["card_id"];
+                        $card_id_split = explode("/", "/" . str_replace("_", "/", $row_art["card_id"]) . "/");
                         $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                        echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row_srt["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_srt["card_name"] . "</h3></a>";
+                        echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row_art["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_art["card_name"] . "</h3></a>";
                     }
                 } else {
-                    echo "Aucun article.";
+                    echo "Aucune carte graphique ne correspond à votre recherche.";
                 }
                 $conn->close();
                 ?>

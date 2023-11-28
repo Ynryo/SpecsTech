@@ -1,12 +1,7 @@
 <h1>Filtrez votre recherche</h1>
 <?php
-
-$flts = [["manufacturer", "Fabricant", ""], ["vram", "Mémoire vidéo", " Go"], ["memory_type", "Type de mémoire", ""], ["max_display_size", "Définition maximale d'affichage", " pixels"], ["max_screens", "Nombre d'écran maximum", ""], ["cooling", "Refroidissement", ""]];
-
 //create filters in relation to db
 foreach ($flts as $flt) {
-
-    // echo $_SERVER["QUERY_STRING"];
 
     $sql_flt = "SELECT DISTINCT $flt[0] FROM graphics_cards ORDER BY $flt[0] DESC";
     $result_flt = $conn->query($sql_flt);
@@ -33,5 +28,5 @@ foreach ($flts as $flt) {
 
 //SELECT DISTINCT $flt[0] FROM graphics_cards WHERE `graphics_cards`.$flt[0] = $row_flt[$flt[0]] ORDER BY $flt[0] DESC
 ?>
-<a class="button btn-small" id="flts-apply">Appliquer (beta)</a>
+<a class="button" id="flts-apply">Appliquer</a>
 <script type="text/javascript" src="/assets/js/filters.js"></script>
