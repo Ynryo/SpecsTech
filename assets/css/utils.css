@@ -29,6 +29,12 @@
     flex-direction: row;
 }
 
+@media all and (max-width: 620px) {
+    .cards-section-main {
+        flex-direction: column;
+    }
+}
+
 .cards-section-main .cards-filter {
     flex-direction: column;
     margin: 20px;
@@ -65,7 +71,8 @@
     margin: 0 0 0 10px;
 }
 
-h2.flt-name, h3.flt-item-name {
+h2.flt-name,
+h3.flt-item-name {
     font-weight: 500;
     margin: 0;
 }
