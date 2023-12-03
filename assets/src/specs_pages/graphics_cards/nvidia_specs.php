@@ -5,17 +5,17 @@
         <span class="block-value"><?php echo $row['architecture'] ?></span>
     </div>
     <div class="spec">
-        <img src="/assets/icons-assets/frequency.png" alt="Architecture">
+        <img src="/assets/icons-assets/frequency.png" alt="Frequence">
         <strong class="block-name">Fréquence de base</strong>
         <span class="block-value"><?php echo $row['frequency'] ?> GHz</span>
     </div>
     <div class="spec">
-        <img src="/assets/icons-assets/ram.png" alt="Architecture">
+        <img src="/assets/icons-assets/ram.png" alt="Mémoire vidéo">
         <strong class="block-name">Mémoire vidéo</strong>
         <span class="block-value"><?php echo $row['vram'] ?> Go</span>
     </div>
     <div class="spec">
-        <img src="/assets/icons-assets/ram.png" alt="Architecture">
+        <img src="/assets/icons-assets/ram.png" alt="Type de mémoire">
         <strong class="block-name">Type de mémoire</strong>
         <span class="block-value"><?php echo $row['memory_type'] ?></span>
     </div>
@@ -23,6 +23,30 @@
 <div class="product">
     <div class="specs">
         <br>
+        <div class="table">
+            <h3>Identité</h3>
+            <?php $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/"); ?>
+            <div class="table-row">
+                <span class="block-name">Nom</span>
+                <span class="block-value"><?php echo $row['card_name'] ?></span>
+            </div>
+            <div class="table-row">
+                <span class="block-name">Architecture</span>
+                <span class="block-value"><?php echo $row['architecture'] ?></span>
+            </div>
+            <div class="table-row">
+                <span class="block-name">Fabricant</span>
+                <span class="block-value"><?php echo $row['manufacturer'] ?></span>
+            </div>
+            <div class="table-row">
+                <span class="block-name">Série</span>
+                <span class="block-value"><?php echo strtoupper($card_id_split[2]) . " " . substr($card_id_split[3], 0, 2); ?></span>
+            </div>
+            <div class="table-row">
+                <span class="block-name">Date de sortie</span>
+                <span class="block-value"><?php echo date_format(date_create($row['release_date']), "d/m/Y") ?></span>
+            </div>
+        </div>
         <div class="table">
             <h3>Performances</h3>
             <div class="table-row">
@@ -92,15 +116,15 @@
             <h3>Caractéristiques physiques</h3>
             <div class="table-row">
                 <span class="block-name">Longueur</span>
-                <span class="block-value"><?php echo $row['length'];if(is_numeric($row['length'])){echo " mm";} ?></span>
+                <span class="block-value"><?php echo $row['length'];if (is_numeric($row['length'])) echo " mm"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Largeur</span>
-                <span class="block-value"><?php echo $row['width'];if(is_numeric($row['width'])){echo " mm";} ?></span>
+                <span class="block-value"><?php echo $row['width'];if (is_numeric($row['width'])) echo " mm"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Epaisseur</span>
-                <span class="block-value"><?php echo $row['thickness'];if(is_numeric($row['thickness'])){echo " slots";} ?></span>
+                <span class="block-value"><?php echo $row['thickness'];if (is_numeric($row['thickness'])) echo " slots"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Type de refroidissement</span>
@@ -120,10 +144,6 @@
             <div class="table-row">
                 <span class="block-name">Cœur Tensor</span>
                 <span class="block-value"><?php echo $row['tensor_cores'] ?></span>
-            </div>
-            <div class="table-row">
-                <span class="block-name">Architecture NVIDIA</span>
-                <span class="block-value"><?php echo $row['architecture'] ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">NVIDIA DLSS</span>
