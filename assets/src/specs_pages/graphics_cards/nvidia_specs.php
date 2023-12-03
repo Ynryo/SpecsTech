@@ -1,23 +1,31 @@
 <div class="frame main-specs">
     <div class="spec">
         <img src="/assets/icons-assets/proccesor.png" alt="Architecture">
-        <strong class="block-name">Architecture</strong>
-        <span class="block-value"><?php echo $row['architecture'] ?></span>
+        <div>
+            <strong class="block-name">Architecture</strong>
+            <span class="block-value"><?php echo $row['architecture'] ?></span>
+        </div>
     </div>
     <div class="spec">
         <img src="/assets/icons-assets/frequency.png" alt="Frequence">
-        <strong class="block-name">Fréquence de base</strong>
-        <span class="block-value"><?php echo $row['frequency'] ?> GHz</span>
+        <div>
+            <strong class="block-name">Fréquence de base</strong>
+            <span class="block-value"><?php echo $row['frequency'] ?> GHz</span>
+        </div>
     </div>
     <div class="spec">
         <img src="/assets/icons-assets/ram.png" alt="Mémoire vidéo">
-        <strong class="block-name">Mémoire vidéo</strong>
-        <span class="block-value"><?php echo $row['vram'] ?> Go</span>
+        <div>
+            <strong class="block-name">Mémoire vidéo</strong>
+            <span class="block-value"><?php echo $row['vram'] ?> Go</span>
+        </div>
     </div>
     <div class="spec">
         <img src="/assets/icons-assets/ram.png" alt="Type de mémoire">
-        <strong class="block-name">Type de mémoire</strong>
-        <span class="block-value"><?php echo $row['memory_type'] ?></span>
+        <div>
+            <strong class="block-name">Type de mémoire</strong>
+            <span class="block-value"><?php echo $row['memory_type'] ?></span>
+        </div>
     </div>
 </div>
 <div class="product">
@@ -116,15 +124,18 @@
             <h3>Caractéristiques physiques</h3>
             <div class="table-row">
                 <span class="block-name">Longueur</span>
-                <span class="block-value"><?php echo $row['length'];if (is_numeric($row['length'])) echo " mm"; ?></span>
+                <span class="block-value"><?php echo $row['length'];
+                                            if (is_numeric($row['length'])) echo " mm"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Largeur</span>
-                <span class="block-value"><?php echo $row['width'];if (is_numeric($row['width'])) echo " mm"; ?></span>
+                <span class="block-value"><?php echo $row['width'];
+                                            if (is_numeric($row['width'])) echo " mm"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Epaisseur</span>
-                <span class="block-value"><?php echo $row['thickness'];if (is_numeric($row['thickness'])) echo " slots"; ?></span>
+                <span class="block-value"><?php echo $row['thickness'];
+                                            if (is_numeric($row['thickness'])) echo " slots"; ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Type de refroidissement</span>

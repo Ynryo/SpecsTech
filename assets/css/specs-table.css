@@ -65,6 +65,11 @@
     width: 100%;
 }
 
+.spec div {
+    display: flex;
+    flex-direction: column;
+}
+
 .spec img {
     padding: 0 20px 20px 0;
     filter: invert(1);
@@ -73,6 +78,13 @@
 
 .spec strong {
     margin-bottom: 10px;
+}
+
+@media all and (max-width: 440px) and (min-width: 250px){
+    .spec {
+        flex-direction: row;
+        max-width: 250px;
+    }
 }
 
 .contact {
@@ -100,16 +112,18 @@
     }
 }
 
-@media all and (max-width:820px){
+@media all and (max-width:820px) {
     .contact {
         flex-direction: column;
     }
+
     .contact p {
         margin-bottom: 20px !important;
     }
 }
 
 @media all and (max-width:620px) {
+
     .specs p,
     .specs span {
         font-size: 14px !important;
