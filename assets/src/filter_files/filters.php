@@ -3,7 +3,7 @@
 //create filters in relation to db
 foreach ($flts as $flt) {
 
-    $sql_flt = "SELECT DISTINCT $flt[0] FROM graphics_cards ORDER BY $flt[0] DESC";
+    $sql_flt = "SELECT DISTINCT $flt[0], $flt[3] FROM graphics_cards ORDER BY $flt[0] DESC";
     $result_flt = $conn->query($sql_flt);
 
     //print chaque catégorie (filtres)
@@ -19,7 +19,7 @@ foreach ($flts as $flt) {
                 echo ' checked';
             }
 
-            echo "><h3 class=\"flt-item-name\">" . $row_flt[$flt[0]] . $flt[2] . "</h3></div>";
+            echo "><h3 class=\"flt-item-name\">" . $row_flt[$flt[3]] . $flt[2] . "</h3></div>";
         }
 
         echo "</div>";

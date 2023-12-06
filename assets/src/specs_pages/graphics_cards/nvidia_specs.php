@@ -94,7 +94,7 @@
             <h3>Affichage</h3>
             <div class="table-row">
                 <span class="block-name">Définition d'affichage maximale</span>
-                <span class="block-value"><?php echo $row['max_display_size'] ?> pixels</span>
+                <span class="block-value"><?php echo $row['max_display_size_displayed'] ?> pixels</span>
             </div>
             <div class="table-row">
                 <span class="block-name">Nombre d'écran(s)</span>
@@ -109,7 +109,7 @@
             <h3>Connectique</h3>
             <div class="table-row">
                 <span class="block-name">Sorties vidéos</span>
-                <span class="block-value"><?php echo $row['video_output'] ?></span>
+                <span class="block-value"><?php echo $row['video_output_displayed'] ?></span>
             </div>
             <div class="table-row">
                 <span class="block-name">Connecteur(s) d'alimentation</span>
@@ -247,6 +247,8 @@
         </div>
     </div>
     <div class="product-img">
-        <img srcset="/assets/images/nvidia/3d/<?php echo $id ?>.png" src="/assets/images/nvidia/3d/<?php echo $id ?>.png" alt="Image de la <?php echo $row['card_name'] ?>">
+        <?php $card_link_split = explode("/", $row["card_img_link"]); 
+        $card_img_link_3d = "/" . $card_link_split[1] . "/" . $card_link_split[2] . "/" . $card_link_split[3] . "/3d/"  . $card_link_split[4] . "/"?>
+        <img srcset="<?php echo $card_img_link_3d ?>" src="<?php echo $card_img_link_3d ?>" alt="Image de la <?php echo $row['card_name'] ?>">
     </div>
 </div>

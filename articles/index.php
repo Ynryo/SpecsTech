@@ -30,7 +30,7 @@
     include(dirname(__FILE__, 2) . "/assets/src/connection.php");
 
     $sort = "";
-    $flts = [["manufacturer", "Fabricant", ""], ["vram", "Mémoire vidéo", " Go"], ["memory_type", "Type de mémoire", ""], ["max_display_size", "Définition maximale d'affichage", " pixels"], ["max_screens", "Nombre d'écran maximum", ""], ["cooling", "Refroidissement", ""]];
+    $flts = [["manufacturer", "Fabricant", "", "manufacturer"], ["vram", "Mémoire vidéo", " Go", "vram"], ["memory_type", "Type de mémoire", "", "memory_type"], ["max_display_size", "Définition maximale d'affichage", " pixels", "max_display_size_displayed"], ["max_screens", "Nombre d'écran maximum", "", "max_screens"], ["cooling", "Refroidissement", "", "cooling"]];
 
     if (isset($_GET["sort"])) {
         $sort = $_GET["sort"];
@@ -48,7 +48,7 @@
                 $sort_column = "card_name";
                 $order = "DESC";
             }
-            $sql_srt = " ORDER BY `$sort_column` $order";
+            $sql_srt = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
         } else {
             $sql_art = "SELECT * FROM `graphics_cards`";
             $sql_srt = "";
@@ -106,10 +106,13 @@
                 <?php
                 if ($result_art->num_rows > 0) {
                     while ($row_art = $result_art->fetch_assoc()) {
-                        $img_link = $row_art["card_id"];
                         $card_id_split = explode("/", "/" . str_replace("_", "/", $row_art["card_id"]) . "/");
-                        $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                        echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row_art["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_art["card_name"] . "</h3></a>";
+                        if ($row_art["manufacturer"] == "NVIDIA") {
+                            $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                        } else if ($row_art["manufacturer"] == "Intel") {
+                            $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . $card_id_split[3] . "/";
+                        }
+                        echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"" . $row_art["card_img_link"] . "\" alt=\"Image de la " . $row_art["card_name"] . "\" srcset=\"" . $row_art["card_img_link"] . "\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_art["card_name"] . "</h3></a>";
                     }
                 } else {
                     echo "Aucune carte graphique ne correspond à votre recherche.";
