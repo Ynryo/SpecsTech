@@ -2,15 +2,15 @@
 <html lang="fr-FR">
 
 <head>
-    <title>SpecsTech - Spécifications techniques</title>
+    <title>Maintenance en cours...</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="SpecsTech, specs tech, carte graphique, cartes graphiques, nvidia, amd" />
-    <meta name="description" content="Retrouvez toutes les informations techniques des dernières cartes graphiques">
-    <meta property="og:title" content="Accueil ǀ SpecsTech" />
+    <meta name="description" content="Maintenance en cours... Nous serons de retour bientôt.">
+    <meta property="og:title" content="Maintenance en cours..." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://specstech.fr" />
-    <meta property="og:description" content="Retrouvez toutes les informations techniques des dernières cartes graphiques">
+    <meta property="og:description" content="Maintenance en cours... Nous serons de retour bientôt.">
     <link rel="canonical" href="https://specstech.fr">
     <link rel="stylesheet" type="text/css" href="/assets/css/modal.css">
     <?php include(dirname(__FILE__, 1) . '/assets/src/assets.php') ?>

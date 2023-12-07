@@ -48,6 +48,7 @@
                 $sort_column = "card_name";
                 $order = "DESC";
             }
+            $sql_art = "";
             $sql_srt = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
         } else {
             $sql_art = "SELECT * FROM `graphics_cards`";
