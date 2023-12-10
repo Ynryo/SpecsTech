@@ -248,7 +248,7 @@
     </div>
     <div class="product-img">
         <?php $card_link_split = explode("/", $row["card_img_link"]); 
-        $card_img_link_3d = "/" . $card_link_split[1] . "/" . $card_link_split[2] . "/" . $card_link_split[3] . "/3d/"  . $card_link_split[4] . "/"?>
+        $card_img_link_3d = "/" . $card_link_split[1] . "/" . $card_link_split[2] . "/" . $card_link_split[3] . "/3d/"  . $card_link_split[4]?>
         <img srcset="<?php echo $card_img_link_3d ?>" src="<?php echo $card_img_link_3d ?>" alt="Image de la <?php echo $row['card_name'] ?>">
     </div>
 </div>

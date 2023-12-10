@@ -1,3 +1,4 @@
+<?php include(dirname(__FILE__, 6) . '/assets/src/files_top.php') ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 
@@ -30,7 +31,14 @@
     include(dirname(__FILE__, 2) . "/assets/src/connection.php");
 
     $sort = "";
-    $flts = [["manufacturer", "Fabricant", "", "manufacturer"], ["vram", "Mémoire vidéo", " Go", "vram"], ["memory_type", "Type de mémoire", "", "memory_type"], ["max_display_size", "Définition maximale d'affichage", " pixels", "max_display_size_displayed"], ["max_screens", "Nombre d'écran maximum", "", "max_screens"], ["cooling", "Refroidissement", "", "cooling"]];
+    $flts = [
+        ["manufacturer", "Fabricant", "", "manufacturer"],
+        ["vram", "Mémoire vidéo", " Go", "vram"],
+        ["memory_type", "Type de mémoire", "", "memory_type"],
+        ["max_display_size", "Définition maximale d'affichage", " pixels", "max_display_size_displayed"],
+        ["max_screens", "Nombre d'écran maximum", "", "max_screens"],
+        ["cooling", "Refroidissement", "", "cooling"]
+    ];
 
     if (isset($_GET["sort"])) {
         $sort = $_GET["sort"];
@@ -48,16 +56,14 @@
                 $sort_column = "card_name";
                 $order = "DESC";
             }
-            $sql_art = "";
-            $sql_srt = "SELECT * FROM `graphics_cards` ORDER BY `$sort_column` $order";
+            $sql_srt = " ORDER BY `$sort_column` $order";
         } else {
-            $sql_art = "SELECT * FROM `graphics_cards`";
             $sql_srt = "";
         }
     } else {
-        $sql_art = "SELECT * FROM `graphics_cards`";
         $sql_srt = "";
     }
+    $sql_art = "SELECT * FROM `graphics_cards`";
 
     $sql_insert_where = "";
     foreach ($flts as $flt) {

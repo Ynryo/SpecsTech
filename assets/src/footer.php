@@ -67,6 +67,24 @@ $sql = "INSERT INTO $table_name (adresse_ip, page_visitee, date_visite, heure_vi
 
 $conn->query($sql);
 
+// $sql = "SELECT * FROM server_actions LIMIT 1";
+// $result = $conn->query($sql);
+
+// if ($result->num_rows > 0) {
+//     $row = $result->fetch_assoc();
+
+//     if (isset($row["action"]) && $row["action"] == "maintenance_mode_on") {
+//         echo $row["action"];
+//         // include("htmls/")
+//         header('Location: https://specstech.fr/maintenance/');
+//         exit(); // Assurez-vous de terminer le script après une redirection header
+//     }
+// }
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
+// header('Location: https://specstech.fr/maintenance.php');
+
 // Fermer la connexion à la base de données
 $conn->close();
 ?>
