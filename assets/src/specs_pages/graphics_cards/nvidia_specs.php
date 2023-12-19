@@ -30,7 +30,6 @@
 </div>
 <div class="product">
     <div class="specs">
-        <br>
         <div class="table">
             <h3>Identité</h3>
             <?php $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/"); ?>

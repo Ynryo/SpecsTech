@@ -1,4 +1,4 @@
-<?php include(dirname(__FILE__, 6) . '/assets/src/files_top.php') ?>
+<?php include(dirname(__FILE__, 2) . '/assets/src/files_top.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -46,11 +46,14 @@
             // Afficher les résultats
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $img_link = $row["card_id"];
                     $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
-                    $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"/assets/images/nvidia/" . $img_link . ".png\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"/assets/images/nvidia/" . $img_link . ".png\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
-                }
+                    if ($row["manufacturer"] == "NVIDIA") {
+                        $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
+                    } else if ($row["manufacturer"] == "Intel") {
+                        $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . $card_id_split[3] . "/";
+                    }
+                    echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"" . $row["card_img_link"] . "\" alt=\"Image de la " . $row["card_name"] . "\" srcset=\"" . $row["card_img_link"] . "\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row["card_name"] . "</h3></a>";
+            }
             } else {
                 echo "Aucune carte graphique trouvée avec cet identifiant.";
             }

@@ -1,3 +1,4 @@
+<?php include(dirname(__FILE__, 1) . '/assets/src/files_top.php') ?>
 <!DOCTYPE html>
 <html lang="fr-FR">
 
