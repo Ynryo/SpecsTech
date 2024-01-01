@@ -105,7 +105,7 @@
     text-decoration: none;
 }
 
-@media all and (max-width: 825px) {
+@media all and (max-width: 1000px) {
 
     header nav:not(.menu nav),
     header form input:not(.menu form input) {
@@ -121,7 +121,7 @@
     }
 }
 
-@media all and (min-width: 825px) {
+@media all and (min-width: 1000px) {
     header nav {
         display: flex;
     }
