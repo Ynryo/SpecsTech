@@ -3,7 +3,13 @@
     --second-main-color: #d400ff;
     --first-theme-color: #000;
     --second-theme-color: #111;
-    --third-theme-color: #161616;
+    --third-theme-color: #171717;
+    --fourth-theme-color: #212121;
+}
+
+@font-face {
+    font-family: "MontserratVariable";
+    src: url(/assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 /* Réinitialisation des styles par défaut */
@@ -29,7 +35,7 @@ h2 {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "MontserratVariable";
     color: #fff;
     background-color: var(--second-theme-color);
 }
