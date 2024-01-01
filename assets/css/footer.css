@@ -4,12 +4,33 @@ footer {
     text-align: center;
 }
 
-footer p {
+footer p.copy {
+    margin-top: 20px;
     font-size: 14px;
 }
-/* 
-footer.bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
+
+footer a.icon h1 {
+    width: auto;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+footer div div p {
+    font-size: 14px;
+}
+
+footer div div p strong {
+    margin-bottom: 10px;
+    font-size: 16px;
+}

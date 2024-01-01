@@ -1,5 +1,29 @@
 <footer>
-    <p>&copy; <?php echo "2023 - " . date("Y") ?> SpecsTech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a>
+    <div>
+        <a class="icon nolink" href="/">
+            <h1>SpecsTech</h1>
+        </a>
+        <div>
+            <p><strong>Articles populaires</strong></p>
+            <p>NVIDIA GeForce RTX 3090 Ti</p>
+            <p>NVIDIA GeForce RTX 4070</p>
+            <p>NVIDIA GeForce RTX 4080</p>
+            <p>NVIDIA GeForce RTX 3070 Ti</p>
+        </div>
+        <div>
+            <p><strong>Naviguer</strong></p>
+            <p>Articles</p>
+            <p>Lexique</p>
+            <p>A propos</p>
+            <p>Nous contacter</p>
+        </div>
+        <div>
+            <p><strong>Nos réseaux</strong></p>
+            <p>Instagram</p>
+        </div>
+    </div>
+    <p class="copy">&copy; <?php echo "2023 - " . date("Y") ?> SpecsTech. Tous droits réservés. 
+        <a href="/legal/" class="link">Mentions légales</a>
     </p>
 </footer>
 
