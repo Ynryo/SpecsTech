@@ -1,152 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<url>
-  <loc>https://specstech.fr/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/about/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/contact/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/60/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/60-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/70/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/70-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/80/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/legal/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/90/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/90-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/80-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/80/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/70-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/70/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/60-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/60/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/30/50/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/40/90/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/80-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/80-super/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/80/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/70-super/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/70/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/60-super/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/rtx/20/60/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://specstech.fr/articles/nvidia/gtx/16/60-ti/</loc>
-  <lastmod>2023-09-21T19:48:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+       <loc>https://specstech.fr/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/app.webmanifest</loc>
+       <lastmod>2023-12-10T22:46:51+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/glossary/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/60/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/60-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/70/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/70-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/80/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/legal/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/90/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/90-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/80-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/80/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/70-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/70/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/60-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/60/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/50/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/40/90/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/80-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/80-super/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/80/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/70-super/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/70/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/60-super/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/20/60/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/gtx/16/60-ti/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://specstech.fr/articles/nvidia/rtx/30/80-12go/</loc>
+       <lastmod>2023-12-31T14:49:42+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
