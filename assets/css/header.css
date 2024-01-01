@@ -1,5 +1,5 @@
 header {
-    background-color: #000;
+    background-color: var(--first-theme-color);
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,6 @@ header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 335px;
 }
 
 nav ul {
