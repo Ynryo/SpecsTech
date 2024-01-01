@@ -10,6 +10,7 @@
         <ul>
             <li><a class="site-nav" href="/">Accueil</a></li>
             <li><a class="site-nav" href="/articles/">Articles</a></li>
+            <li><a class="site-nav" href="/glossary/">Lexique</a></li>
             <li><a class="site-nav" href="/about/">À propos</a></li>
             <li><a class="site-nav" href="/contact/">Contact</a></li>
         </ul>
@@ -27,6 +28,7 @@
             <ul>
                 <li><a class="site-nav" href="/">Accueil</a></li>
                 <li><a class="site-nav" href="/articles/">Articles</a></li>
+                <li><a class="site-nav" href="/glossary/">Lexique</a></li>
                 <li><a class="site-nav" href="/about/">À propos</a></li>
                 <li><a class="site-nav" href="/contact/">Contact</a></li>
             </ul>
