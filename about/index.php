@@ -30,7 +30,7 @@
 
     <section class="main about">
         <h2>À propos du site</h2>
-        <p>Bienvenue sur le site <span class="colored-logo">Specs-Tech</span>, dédié aux spécifications techniques des cartes graphiques. Son objectif est
+        <p>Bienvenue sur le site <span class="colored-logo">SpecsTech</span>, dédié aux spécifications techniques des cartes graphiques. Son objectif est
             de fournir
             aux utilisateurs des informations détaillées et précises sur les performances, les caractéristiques et les
             spécifications des cartes graphiques les plus populaires du marché.</p>
@@ -41,7 +41,7 @@
         <p>Je mets à jour régulièrement la base de données avec les dernières cartes graphiques et je m'efforce de
             fournir des informations fiables et objectives. En tant que gestionnaire unique du site, je suis à votre
             disposition pour répondre à toutes vos questions et vous guider dans votre choix.</p>
-        <p>J'espère que <span class="colored-logo">Specs-Tech</span> vous sera utile et qu'il vous permettra de trouver facilement les informations dont
+        <p>J'espère que <span class="colored-logo">SpecsTech</span> vous sera utile et qu'il vous permettra de trouver facilement les informations dont
             vous avez besoin pour trouver la carte graphique parfaite pour vos besoins. N'hésitez pas à me <a href="/contact/" class="link">contacter</a> si
             vous avez des suggestions, des commentaires ou des demandes spécifiques. Je suis là pour vous aider!</p>
 
