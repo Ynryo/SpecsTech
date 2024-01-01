@@ -12,14 +12,18 @@ foreach ($flts as $flt) {
 
         //print chaque valeur de filtre (chaque checkbox)
         while ($row_flt = $result_flt->fetch_assoc()) {
-            echo "<div class=\"flt-item\"><input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "[]\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"";
+            echo
+            "<div class=\"flt-item\"><div>
+                <label class=\"checkbox\">
+                    <input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"";
 
             // Vérifie si le filtre est présent dans les paramètres de l'URL
             if (isset($_GET[$flt[0]]) && in_array($row_flt[$flt[0]], explode(',', $_GET[$flt[0]]))) {
                 echo ' checked';
             }
 
-            echo "><h3 class=\"flt-item-name\">" . $row_flt[$flt[3]] . $flt[2] . "</h3></div>";
+            echo "><div class=\"transition\"></div></div></label>
+            <h3 class=\"flt-item-name\">" . $row_flt[$flt[3]] . $flt[2] . "</h3></div>";
         }
 
         echo "</div>";
