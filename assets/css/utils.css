@@ -77,15 +77,47 @@ h3.flt-item-name {
     margin: 0;
 }
 
-.flt-item input[type="checkbox"] {
+.flt-item div {
     width: 25px;
     height: 25px;
-    margin: 0;
-    transition: 0.3s ease;
 }
 
-.cards-filter input[type="range"] {
-    width: 100%;
+.checkbox {
+    display: block;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkbox div {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+}
+
+.checkbox input[type=checkbox]:checked+div {
+    left: -10px;
+    top: -10px;
+}
+
+.checkbox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+}
+
+.transition {
+    transition: 300ms ease-in-out;
 }
 
 .cards-filter.frame .button {

@@ -70,14 +70,18 @@
         if (isset($_GET[$flt[0]])) {
             $value = $_GET[$flt[0]];
             if (str_contains($value, ",")) {
-                $value = "(" . $value . ")";
+                $values_array = explode(',', $value);
+                $values_array = array_map(function ($val) {
+                    return '"' . $val . '"';
+                }, $values_array);
+                $value = '(' . implode(',', $values_array) . ')';
                 if ($sql_insert_where !== "") {
                     $sql_insert_where .= " AND " . $flt[0] . " IN " . $value;
                 } else {
                     $sql_insert_where = " WHERE " . $flt[0] . " IN " . $value;
                 }
             } else {
-                $value = "'" . $value . "'";
+                $value = "\"" . $value . "\"";
                 if ($sql_insert_where !== "") {
                     $sql_insert_where .= " AND " . $flt[0] . " = " . $value;
                 } else {
@@ -87,7 +91,6 @@
         }
     }
     $sql_art = $sql_art . $sql_insert_where . $sql_srt;
-
     $result_art = $conn->query($sql_art);
     ?>
     <section class="main">
