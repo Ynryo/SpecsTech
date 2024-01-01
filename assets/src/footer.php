@@ -1,5 +1,5 @@
 <footer>
-    <p>&copy; <?php echo date("Y") ?> SpecsTech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a>
+    <p>&copy; <?php echo "2023 - " . date("Y") ?> SpecsTech. Tous droits réservés. <a href="/legal/" class="link">Mentions légales</a>
     </p>
 </footer>
 
@@ -56,7 +56,7 @@ function get_client_ip()
 }
 
 // Enregistrement des informations du visiteur
-$page_visitee = $_SERVER['REQUEST_URI']; // La page visitée
+$page_visitee = strip_tags($_SERVER['REQUEST_URI']); // La page visitée
 $ip_visiteur = get_client_ip(); // Adresse IP du visiteur
 $date_visite = date("Y-m-d"); // Date de la visite
 $heure_visite = date("H:i:s"); // Heure de la visite
@@ -66,24 +66,6 @@ $sql = "INSERT INTO $table_name (adresse_ip, page_visitee, date_visite, heure_vi
         VALUES ('$ip_visiteur', '$page_visitee', '$date_visite', '$heure_visite')";
 
 $conn->query($sql);
-
-// $sql = "SELECT * FROM server_actions LIMIT 1";
-// $result = $conn->query($sql);
-
-// if ($result->num_rows > 0) {
-//     $row = $result->fetch_assoc();
-
-//     if (isset($row["action"]) && $row["action"] == "maintenance_mode_on") {
-//         echo $row["action"];
-//         // include("htmls/")
-//         header('Location: https://specstech.fr/maintenance/');
-//         exit(); // Assurez-vous de terminer le script après une redirection header
-//     }
-// }
-error_reporting(E_ALL);
-ini_set('display_errors', true);
-
-// header('Location: https://specstech.fr/maintenance.php');
 
 // Fermer la connexion à la base de données
 $conn->close();
