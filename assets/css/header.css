@@ -7,32 +7,44 @@ header {
     justify-content: space-between;
 }
 
+a.icon {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+a.icon::after {
+    display: block;
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, var(--first-main-color) 0%, var(--second-main-color) 100%);
+    filter: blur(15px);
+    opacity: 0.6;
+    border-radius: 50%;
+    width: 198px;
+    height: 39px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
 a.icon h1 {
+    display: block;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
     box-sizing: border-box;
-    display: block;
-    margin: auto 0;
     text-transform: uppercase;
     width: 220px;
+    position: relative;
+    z-index: 2;
 }
-
-/* header h1::before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: url("/assets/icons-assets/gradient-shadow.png") no-repeat center center;
-    top: 100px;
-    position: absolute;
-    display: inline-block;
-    z-index: -1;
-} */
 
 header form {
     margin: 0 20px;
     flex: 1;
-    /* display: none; */
+    z-index: 2;
 }
 
 header form input {

@@ -1,7 +1,6 @@
 <header>
     <a class="icon nolink" href="/">
         <h1>SpecsTech</h1>
-        <!-- <img src="/assets/icons-assets/gradient-shadow.png"> -->
     </a>
     <form method="get" action="/search/">
         <input type="search" class="search-bar" placeholder="Recherchez des cartes graphiques" id="search-bar" name="q" role="combobox" aria-roledescription="combobox">
