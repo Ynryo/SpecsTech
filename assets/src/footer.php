@@ -5,24 +5,32 @@
         </a>
         <div>
             <p><strong>Articles populaires</strong></p>
-            <p>NVIDIA GeForce RTX 3090 Ti</p>
-            <p>NVIDIA GeForce RTX 4070</p>
-            <p>NVIDIA GeForce RTX 4080</p>
-            <p>NVIDIA GeForce RTX 3070 Ti</p>
+            <?php
+            include("connection.php");
+            $sql = "SELECT `card_id`,`card_name`,`manufacturer` FROM `graphics_cards` ORDER BY popularity DESC LIMIT 5";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    include('id_to_link.php');
+                    echo "<a href=\"/articles" . $card_link . "\" class=\"link\">" . $row["card_name"] . "</a>";
+                }
+            }
+            ?>
         </div>
         <div>
             <p><strong>Naviguer</strong></p>
-            <p>Articles</p>
-            <p>Lexique</p>
-            <p>A propos</p>
-            <p>Nous contacter</p>
+            <a href="/articles/" class="link">Articles</a>
+            <a href="/glossary/" class="link">Lexique</a>
+            <a href="/about/" class="link">A propos</a>
+            <a href="/contact/" class="link">Nous contacter</a>
         </div>
         <div>
             <p><strong>Nos réseaux</strong></p>
-            <p>Instagram</p>
+            <a href="https://instagram.com/specs.tech" class="link">Instagram</a>
+            <a href="mailto:contact@specstech.fr" class="link">Mail</a>
         </div>
     </div>
-    <p class="copy">&copy; <?php echo "2023 - " . date("Y") ?> SpecsTech. Tous droits réservés. 
+    <p class="copy">&copy; <?php echo "2023 - " . date("Y") ?> SpecsTech. Tous droits réservés.
         <a href="/legal/" class="link">Mentions légales</a>
     </p>
 </footer>
@@ -32,30 +40,6 @@
 
 <?php
 include("connection.php");
-
-// Vérifier si la table existe, sinon la créer
-$table_name = "table_visiteurs";
-$sql_check_table = "SHOW TABLES LIKE '$table_name'";
-$result_check_table = $conn->query($sql_check_table);
-
-if ($result_check_table->num_rows == 0) {
-    $sql_create_table = "CREATE TABLE $table_name (
-        id INT(11) AUTO_INCREMENT PRIMARY KEY,
-        adresse_ip VARCHAR(45) NOT NULL,
-        page_visitee VARCHAR(255) NOT NULL,
-        date_visite DATE NOT NULL,
-        heure_visite TIME NOT NULL
-    )";
-
-    if ($conn->query($sql_create_table) === TRUE) {
-        echo "La table '$table_name' a été créée avec succès !";
-    } else {
-        echo "Erreur lors de la création de la table : " . $conn->error;
-        $conn->close();
-        exit();
-    }
-}
-
 // Fonction pour obtenir l'adresse IP du visiteur
 function get_client_ip()
 {
@@ -86,7 +70,7 @@ $date_visite = date("Y-m-d"); // Date de la visite
 $heure_visite = date("H:i:s"); // Heure de la visite
 
 // Requête SQL pour insérer les données dans la table
-$sql = "INSERT INTO $table_name (adresse_ip, page_visitee, date_visite, heure_visite)
+$sql = "INSERT INTO table_visiteurs (adresse_ip, page_visitee, date_visite, heure_visite)
         VALUES ('$ip_visiteur', '$page_visitee', '$date_visite', '$heure_visite')";
 
 $conn->query($sql);

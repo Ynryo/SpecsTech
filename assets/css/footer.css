@@ -13,6 +13,14 @@ footer a.icon h1 {
     width: auto;
 }
 
+/* footer a.icon h1::after {
+    background: #bfd70e;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border: 2px solid #679403;
+} */
+
 footer div {
     display: flex;
     flex-direction: row;
@@ -26,11 +34,30 @@ footer div div {
     text-align: left;
 }
 
-footer div div p {
+footer div div p,
+footer div div a {
     font-size: 14px;
 }
 
 footer div div p strong {
     margin-bottom: 10px;
     font-size: 16px;
+}
+
+@media all and (min-width: 1400px) {
+    footer {
+        padding: 20px 75px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    footer div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer a.icon h1,
+    footer div div:not(footer div div:last-child) {
+        margin-bottom: 10px;
+    }
 }
