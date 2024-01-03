@@ -28,8 +28,6 @@
         </div>
     </section>
     <?php
-    include(dirname(__FILE__, 2) . "/assets/src/connection.php");
-
     $sort = "";
     $flts = [
         ["manufacturer", "Fabricant", "", "manufacturer"],
@@ -116,12 +114,8 @@
                 <?php
                 if ($result_art->num_rows > 0) {
                     while ($row_art = $result_art->fetch_assoc()) {
-                        $card_id_split = explode("/", "/" . str_replace("_", "/", $row_art["card_id"]) . "/");
-                        if ($row_art["manufacturer"] == "NVIDIA") {
-                            $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
-                        } else if ($row_art["manufacturer"] == "Intel") {
-                            $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . $card_id_split[3] . "/";
-                        }
+                        $row = $row_art;
+                        include(dirname(__FILE__, 2) . '/assets/src/id_to_link.php');
                         echo "<a href=\"/articles" . $card_link . "\" class=\"card\"><div class=\"card-img-container\"><img src=\"" . $row_art["card_img_link"] . "\" alt=\"Image de la " . $row_art["card_name"] . "\" srcset=\"" . $row_art["card_img_link"] . "\" class=\"cards-img\"></div><img src=\"/assets/svg/cards-line.svg\" alt=\"Trait de séparation en forme de vague irrégulière\" srcset=\"/assets/svg/cards-line.svg\" class=\"cards-line\"><h3>" . $row_art["card_name"] . "</h3></a>";
                     }
                 } else {

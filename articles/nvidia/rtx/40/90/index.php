@@ -1,8 +1,8 @@
-<?php include(dirname(__FILE__, 6) . '/assets/src/files_top.php') ?>
 <?php
 $id = basename(dirname(__FILE__, 4)) . "_" . basename(dirname(__FILE__, 3)) . "_" . basename(dirname(__FILE__, 2)) . basename(dirname(__FILE__, 1));
+include(dirname(__FILE__, 6) . '/assets/src/files_top.php');
+include(dirname(__FILE__, 6) . '/assets/src/get_properties.php');
 ?>
-<?php include(dirname(__FILE__, 6) . '/assets/src/get_properties.php') ?>
 
 <!DOCTYPE html>
 <html>
