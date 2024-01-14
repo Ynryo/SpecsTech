@@ -23,7 +23,7 @@ document.getElementById("flts-apply").addEventListener('click', () => {
                 }
             }
         } else if (!checkbox.checked) {
-            alreadyIn = "pas coché"
+            // alreadyIn = "pas coché"
             if (urlParams.has(checkboxName)) {
                 if (currentValue.includes(checkboxValue)) {
                     currentValue.splice(currentValue.indexOf(checkboxValue), 1)
@@ -38,10 +38,8 @@ document.getElementById("flts-apply").addEventListener('click', () => {
     })
     // delete "?" if params size = 0
     if (urlParams.size !== 0) {
-
         window.location.href = window.location.pathname + "?" + urlParams
     } else {
-
         window.location.href = window.location.pathname
     }
 });

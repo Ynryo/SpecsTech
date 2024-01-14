@@ -48,7 +48,7 @@
     height: 3px;
     bottom: 2px;
     right: 0;
-    transition: all 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 .card:hover::after {

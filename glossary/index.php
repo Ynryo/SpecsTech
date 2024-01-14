@@ -33,16 +33,17 @@
     <section class="main">
         <?php
         $sql = "SELECT * FROM `glossary`";
+        include(dirname(__FILE__, 2) . '/assets/src/connection.php');
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo
                 '<div class="table-line" id="articles_lines">
-                    <div class="line-top">'
-                    . $row["title"] .
-                    '<span class="material-symbols-rounded">
-                    expand_more
-                    </span>
+                    <div class="line-top" id="line-top">'
+                        . $row["title"] .
+                        '<span class="material-symbols-rounded expand-icon">
+                            expand_more
+                        </span>
                     </div>
                     <div class="line-content">' . $row["description"] . '</div>
                 </div>';

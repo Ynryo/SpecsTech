@@ -89,6 +89,7 @@
         }
     }
     $sql_art = $sql_art . $sql_insert_where . $sql_srt;
+    include(dirname(__FILE__, 2) . '/assets/src/connection.php');
     $result_art = $conn->query($sql_art);
     ?>
     <section class="main">

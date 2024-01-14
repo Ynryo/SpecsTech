@@ -53,14 +53,19 @@
                 $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
                 $card_link = "/" . $card_id_split[1] . "/" . $card_id_split[2] . "/" . substr($card_id_split[3], 0, 2) . "/" . substr($card_id_split[3], 2) . "/";
                 echo '<a href="/articles' . $card_link . '" class="frame nolink">
-                        <div class="content">
-                            <div class="desc">
-                                <h3>' . $row["card_name"] . '</h3>
-                                <p>Décrouvrez les spécifications techniques de la ' . $row["card_name"] . '.</p>
-                            <div href="/articles' . $card_link . '" class="button">Voir les spécifications</div>
-                            </div>
-                            <img class="articles-img" src=/assets/images/nvidia/' . $img_link . '.png alt="' . $row["card_name"] . '"></img>
-                        </div>
+                    <div class="content">
+                    <div class="desc">
+                    <h3>' . $row["card_name"] . '</h3>
+                    <p>Décrouvrez les spécifications techniques de la ' . $row["card_name"] . '.</p><br>';
+
+                if ($row["release_date"] > date('Y-m-d')) {
+                    echo "Date de sortie prévue le " . date_format(date_create($row['release_date']), "d/m/Y");
+                }
+                
+                echo '<div href="/articles' . $card_link . '" class="button">Voir les spécifications</div>
+                    </div>
+                    <img class="articles-img" src=/assets/images/nvidia/' . $img_link . '.png alt="' . $row["card_name"] . '"></img>
+                    </div>
                     </a>';
             }
         } else {

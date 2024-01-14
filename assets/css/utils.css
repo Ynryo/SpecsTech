@@ -29,11 +29,22 @@
     flex-direction: row;
 }
 
-@media all and (max-width: 620px) {
+@media all and (max-width: 800px) {
     .cards-section-main {
         flex-direction: column;
     }
 }
+
+/* @media all and (max-width: 700px) {
+    .cards-section-main .cards-filter.frame {
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+} */
 
 .cards-section-main .cards-filter {
     flex-direction: column;
@@ -45,6 +56,7 @@
 .cards-filter .filter {
     display: flex;
     flex-direction: column;
+    /* z-index: 50; */
 }
 
 .cards-filter .filter .flt-item {
