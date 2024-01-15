@@ -31,7 +31,7 @@
 <div class="product">
     <div class="specs">
         <?php
-        $categories = ["Identité", "Performances", "Affichage", "Connectique", "Caractéristiques physiques", "Technologies"];
+        $categories = ["Identité", "Performances", "Affichage", "Connectique", "Alimentation et thermie", "Caractéristiques physiques", "Technologies"];
         $card_id_split = explode("/", "/" . str_replace("_", "/", $row["card_id"]) . "/");
 
         foreach ($categories as $category) {

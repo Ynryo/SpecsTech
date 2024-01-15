@@ -3,7 +3,7 @@
 //create filters in relation to db
 foreach ($flts as $flt) {
 
-    $sql_flt = "SELECT DISTINCT $flt[0], $flt[3] FROM graphics_cards ORDER BY $flt[0] DESC";
+    $sql_flt = "SELECT DISTINCT $flt[0], $flt[3] FROM graphics_cards WHERE $flt[0] IS NOT NULL ORDER BY $flt[0] DESC";
     $result_flt = $conn->query($sql_flt);
 
     //print chaque catégorie (filtres)
@@ -14,8 +14,8 @@ foreach ($flts as $flt) {
         while ($row_flt = $result_flt->fetch_assoc()) {
             echo
             "<div class=\"flt-item\"><div>
-                <label class=\"checkbox\">
-                    <input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"";
+                    <label class=\"checkbox\">
+                        <input type=\"checkbox\" name=\"" . $flt[0] . "-" . $row_flt[$flt[0]] . "\" class=\"ckbx-flt\" data-flt=\"" . $flt[0] . "\" data-value=\"" . $row_flt[$flt[0]] . "\"";
 
             // Vérifie si le filtre est présent dans les paramètres de l'URL
             if (isset($_GET[$flt[0]]) && in_array($row_flt[$flt[0]], explode(',', $_GET[$flt[0]]))) {
@@ -23,7 +23,7 @@ foreach ($flts as $flt) {
             }
 
             echo "><div class=\"transition\"></div></div></label>
-            <h3 class=\"flt-item-name\">" . $row_flt[$flt[3]] . $flt[2] . "</h3></div>";
+                <h3 class=\"flt-item-name\">" . $row_flt[$flt[3]] . $flt[2] . "</h3></div>";
         }
 
         echo "</div>";

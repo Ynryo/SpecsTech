@@ -33,8 +33,9 @@
         ["manufacturer", "Fabricant", "", "manufacturer"],
         ["vram", "Mémoire vidéo", " Go", "vram"],
         ["memory_type", "Type de mémoire", "", "memory_type"],
-        ["max_display_size", "Définition maximale d'affichage", " pixels", "max_display_size_displayed"],
-        ["max_screens", "Nombre d'écran maximum", "", "max_screens"],
+        ["max_display_size_not_displayed", "Définition maximale d'affichage", " pixels", "max_display_size_displayed"],
+        // ["video_output_not_displayed", "Sorties vidéos", "", "video_output_displayed"],
+        ["video_connectors_not_displayed", "Connecteur(s) d'alimentation", "", "video_connectors_displayed"],
         ["cooling", "Refroidissement", "", "cooling"]
     ];
 
